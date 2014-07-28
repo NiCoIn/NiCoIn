@@ -1,91 +1,91 @@
-#include "freicoinunits.h"
+#include "nicoinunits.h"
 
 #include <QStringList>
 
-FreicoinUnits::FreicoinUnits(QObject *parent):
+NiCoInUnits::NiCoInUnits(QObject *parent):
         QAbstractListModel(parent),
         unitlist(availableUnits())
 {
 }
 
-QList<FreicoinUnits::Unit> FreicoinUnits::availableUnits()
+QList<NiCoInUnits::Unit> NiCoInUnits::availableUnits()
 {
-    QList<FreicoinUnits::Unit> unitlist;
-    unitlist.append(FRC);
-    unitlist.append(mFRC);
-    unitlist.append(uFRC);
+    QList<NiCoInUnits::Unit> unitlist;
+    unitlist.append(NCI);
+    unitlist.append(mNCI);
+    unitlist.append(uNCI);
     return unitlist;
 }
 
-bool FreicoinUnits::valid(int unit)
+bool NiCoInUnits::valid(int unit)
 {
     switch(unit)
     {
-    case FRC:
-    case mFRC:
-    case uFRC:
+    case NCI:
+    case mNCI:
+    case uNCI:
         return true;
     default:
         return false;
     }
 }
 
-QString FreicoinUnits::name(int unit)
+QString NiCoInUnits::name(int unit)
 {
     switch(unit)
     {
-    case FRC: return QString("FRC");
-    case mFRC: return QString("mFRC");
-    case uFRC: return QString::fromUtf8("μFRC");
+    case NCI: return QString("NCI");
+    case mNCI: return QString("mNCI");
+    case uNCI: return QString::fromUtf8("μNCI");
     default: return QString("???");
     }
 }
 
-QString FreicoinUnits::description(int unit)
+QString NiCoInUnits::description(int unit)
 {
     switch(unit)
     {
-    case FRC: return QString("Freicoins");
-    case mFRC: return QString("Milli-Freicoins (1 / 1,000)");
-    case uFRC: return QString("Micro-Freicoins (1 / 1,000,000)");
+    case NCI: return QString("NiCoIns");
+    case mNCI: return QString("Milli-NiCoIns (1 / 1,000)");
+    case uNCI: return QString("Micro-NiCoIns (1 / 1,000,000)");
     default: return QString("???");
     }
 }
 
-mpq FreicoinUnits::factor(int unit)
+mpq NiCoInUnits::factor(int unit)
 {
     switch(unit)
     {
-    case uFRC: return mpq("100/1");
-    case mFRC: return mpq("100000/1");
+    case uNCI: return mpq("100/1");
+    case mNCI: return mpq("100000/1");
     default:
-    case FRC:  return mpq("100000000/1");
+    case NCI:  return mpq("100000000/1");
     }
 }
 
-int FreicoinUnits::amountDigits(int unit)
+int NiCoInUnits::amountDigits(int unit)
 {
     switch(unit)
     {
-    case FRC: return 8; // <100,000,000 (# digits, without commas)
-    case mFRC: return 11; // <100,000,000,000
-    case uFRC: return 14; // <100,000,000,000,000
+    case NCI: return 8; // <100,000,000 (# digits, without commas)
+    case mNCI: return 11; // <100,000,000,000
+    case uNCI: return 14; // <100,000,000,000,000
     default: return 0;
     }
 }
 
-int FreicoinUnits::decimals(int unit)
+int NiCoInUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case FRC: return 8;
-    case mFRC: return 5;
-    case uFRC: return 2;
+    case NCI: return 8;
+    case mNCI: return 5;
+    case uNCI: return 2;
     default: return 0;
     }
 }
 
-QString FreicoinUnits::format(int unit, const mpq& n, bool fPlus)
+QString NiCoInUnits::format(int unit, const mpq& n, bool fPlus)
 {
     // Note: not using straight sprintf here because we do NOT want
     // localized number formatting.
@@ -99,12 +99,12 @@ QString FreicoinUnits::format(int unit, const mpq& n, bool fPlus)
     return QString::fromStdString(str);
 }
 
-QString FreicoinUnits::formatWithUnit(int unit, const mpq& amount, bool plussign)
+QString NiCoInUnits::formatWithUnit(int unit, const mpq& amount, bool plussign)
 {
     return format(unit, amount, plussign) + QString(" ") + name(unit);
 }
 
-bool FreicoinUnits::parse(int unit, const QString &value, mpq *val_out)
+bool NiCoInUnits::parse(int unit, const QString &value, mpq *val_out)
 {
     mpq ret_value;
     if (!ParseMoney(value.toStdString(), ret_value))
@@ -116,13 +116,13 @@ bool FreicoinUnits::parse(int unit, const QString &value, mpq *val_out)
     return true;
 }
 
-int FreicoinUnits::rowCount(const QModelIndex &parent) const
+int NiCoInUnits::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
     return unitlist.size();
 }
 
-QVariant FreicoinUnits::data(const QModelIndex &index, int role) const
+QVariant NiCoInUnits::data(const QModelIndex &index, int role) const
 {
     int row = index.row();
     if(row >= 0 && row < unitlist.size())

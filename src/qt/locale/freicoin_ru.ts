@@ -6,32 +6,32 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Freicoin</source>
-        <translation>О Freicoin</translation>
+        <source>About NiCoIn</source>
+        <translation>О NiCoIn</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Freicoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Freicoin&lt;/b&gt; версии</translation>
+        <source>&lt;b&gt;NiCoIn&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;NiCoIn&lt;/b&gt; версии</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2012 Bitcoin developers
-Copyright © 2011-2012 Freicoin developers
+Copyright © 2011-2012 NiCoIn developers
 
 The conceptual marriage of Gesell&apos;s Freigeld with Bitcoin is due to one individual without whom this project would never have started: Jorge Timón. The initial release would not have been possible without further contributions from developers Mark Friedenbach, Matthew Redmond, Aaron Blumenshine, and an anonymous contributor.
 
-The initial development of Freicoin was made possible through generous financial support from Martin Auer, Matthew Redmond, Carsten Langer, Manolis Afentakis, Dave Berzack, Marco Bluethgen, Jamie Derkenne, Josef Dietl, Claas Kähler, Alex Glaser, Trent Larson, James O&apos;Keefe, David Rodrigues, Lucas Vázquez Besteiro, Reinoud Zandijk, and anonymous supporters.
+The initial development of NiCoIn was made possible through generous financial support from Martin Auer, Matthew Redmond, Carsten Langer, Manolis Afentakis, Dave Berzack, Marco Bluethgen, Jamie Derkenne, Josef Dietl, Claas Kähler, Alex Glaser, Trent Larson, James O&apos;Keefe, David Rodrigues, Lucas Vázquez Besteiro, Reinoud Zandijk, and anonymous supporters.
 
-Last but certainly not least, we all owe a debt to the legacy of Silvio Gesell, as it is upon his theory of free money that Freicoin is built.</source>
+Last but certainly not least, we all owe a debt to the legacy of Silvio Gesell, as it is upon his theory of free money that NiCoIn is built.</source>
         <translation>Copyright © 2009-2012 Разработчики Bitcoin
-Copyright © 2011-2012 Разработчики Freicoin
+Copyright © 2011-2012 Разработчики NiCoIn
 
 Концептуальное объединение свободных денег Сильвио Гезеля и Биткоин произошло благодаря одному человеку, без которого данный проект даже не начался бы: Jorge Timón. Начальный релиз не был бы возможен без дальнейших усилий разработчиков Mark Friedenbach, Matthew Redmond, Aaron Blumenshine, и анонимного участника.
 
-Первоначальная разработка Freicoin осуществлялась с великодушной финансовой поддержкой Martin Auer, Matthew Redmond, Carsten Langer, Manolis Afentakis, Dave Berzack, Marco Bluethgen, Jamie Derkenne, Josef Dietl, Claas Kähler, Alex Glaser, Trent Larson, James O&apos;Keefe, David Rodrigues, Lucas Vázquez Besteiro, Reinoud Zandijk, и анонимных спонсоров.
+Первоначальная разработка NiCoIn осуществлялась с великодушной финансовой поддержкой Martin Auer, Matthew Redmond, Carsten Langer, Manolis Afentakis, Dave Berzack, Marco Bluethgen, Jamie Derkenne, Josef Dietl, Claas Kähler, Alex Glaser, Trent Larson, James O&apos;Keefe, David Rodrigues, Lucas Vázquez Besteiro, Reinoud Zandijk, и анонимных спонсоров.
 
-И наконец, мы все в долгу перед стариной Сильвио Гезелем, так как именно его теорию свободных денег использует Freicoin.</translation>
+И наконец, мы все в долгу перед стариной Сильвио Гезелем, так как именно его теорию свободных денег использует NiCoIn.</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -58,8 +58,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+6"/>
-        <source>These are your Freicoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Здесь ваши адреса Freicoin для получения платежей. Вы можете захотеть указать разные для каждого отправителя, чтобы отслеживать кто платит вам</translation>
+        <source>These are your NiCoIn addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Здесь ваши адреса NiCoIn для получения платежей. Вы можете захотеть указать разные для каждого отправителя, чтобы отслеживать кто платит вам</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -78,8 +78,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+25"/>
-        <source>Sign a message to prove you own a Freicoin address</source>
-        <translation>Подписать сообщение для доказательства, что вы владеете адресом Freicoin</translation>
+        <source>Sign a message to prove you own a NiCoIn address</source>
+        <translation>Подписать сообщение для доказательства, что вы владеете адресом NiCoIn</translation>
     </message>
     <message>
         <location line="-36"/>
@@ -103,8 +103,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+11"/>
-        <source>Verify a message to ensure it was signed with a specified Freicoin address</source>
-        <translation>Проверить сообщение для удостоверения, что оно было подписано указанным адресом Freicoin</translation>
+        <source>Verify a message to ensure it was signed with a specified NiCoIn address</source>
+        <translation>Проверить сообщение для удостоверения, что оно было подписано указанным адресом NiCoIn</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -244,13 +244,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+0"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR FREICOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR NICOINS&lt;/b&gt;!</source>
         <translation>Предупреждение: если вы зашифровали свой кошелек и забудете свою кодовую фразу, вы &lt;b&gt;ПОТЕРЯЕТЕ ВСЕ ВАШИ ФРЕЙКОИНЫ&lt;/b&gt;!</translation>
     </message>
     <message>
         <location line="+11"/>
-        <source>Freicoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your freicoins from being stolen by malware infecting your computer.</source>
-        <translation>Freicoin закроется сейчас чтобы завершить процесс зашифровки. Помните, что зашифровав свой кошелек, вы не сможете полностью защитить свои фрейкоины от кражи вредоносным ПО, заражающим ваш компьютер.</translation>
+        <source>NiCoIn will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your nicoins from being stolen by malware infecting your computer.</source>
+        <translation>NiCoIn закроется сейчас чтобы завершить процесс зашифровки. Помните, что зашифровав свой кошелек, вы не сможете полностью защитить свои фрейкоины от кражи вредоносным ПО, заражающим ваш компьютер.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -373,8 +373,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Freicoin address.</source>
-        <translation>Введенный адрес &quot;%1&quot; не является корректным адресом Freicoin.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid NiCoIn address.</source>
+        <translation>Введенный адрес &quot;%1&quot; не является корректным адресом NiCoIn.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -388,16 +388,16 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
 </context>
 <context>
-    <name>FreicoinGUI</name>
+    <name>NiCoInGUI</name>
     <message>
-        <location filename="../freicoin.cpp" line="+109"/>
-        <source>A fatal error occured. Freicoin can no longer continue safely and will quit.</source>
-        <translation>Случилась фатальная ошибка. Freicoin не может далее благополучно функционировать и будет закрыт.</translation>
+        <location filename="../nicoin.cpp" line="+109"/>
+        <source>A fatal error occured. NiCoIn can no longer continue safely and will quit.</source>
+        <translation>Случилась фатальная ошибка. NiCoIn не может далее благополучно функционировать и будет закрыт.</translation>
     </message>
     <message>
-        <location filename="../freicoingui.cpp" line="+74"/>
-        <source>Freicoin</source>
-        <translation>Freicoin</translation>
+        <location filename="../nicoingui.cpp" line="+74"/>
+        <source>NiCoIn</source>
+        <translation>NiCoIn</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -416,8 +416,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+6"/>
-        <source>Send coins to a Freicoin address</source>
-        <translation>Отправить монетки на адрес Freicoin</translation>
+        <source>Send coins to a NiCoIn address</source>
+        <translation>Отправить монетки на адрес NiCoIn</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -466,13 +466,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;About Freicoin</source>
-        <translation>О &amp;Freicoin</translation>
+        <source>&amp;About NiCoIn</source>
+        <translation>О &amp;NiCoIn</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Show information about Freicoin</source>
-        <translation>Показать информацию о Freicoin</translation>
+        <source>Show information about NiCoIn</source>
+        <translation>Показать информацию о NiCoIn</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -491,8 +491,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Modify configuration options for Freicoin</source>
-        <translation>Изменить настроки Freicoin</translation>
+        <source>Modify configuration options for NiCoIn</source>
+        <translation>Изменить настроки NiCoIn</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -593,16 +593,16 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+0"/>
         <location line="+60"/>
-        <source>Freicoin client</source>
-        <translation>Клиент Freicoin</translation>
+        <source>NiCoIn client</source>
+        <translation>Клиент NiCoIn</translation>
     </message>
     <message numerus="yes">
         <location line="+69"/>
-        <source>%n active connection(s) to Freicoin network</source>
+        <source>%n active connection(s) to NiCoIn network</source>
         <translation>
-            <numerusform>%n активное соединение с сетью Freicoin</numerusform>
-            <numerusform>%n активных соединения с сетью Freicoin</numerusform>
-            <numerusform>%n активных соединений с сетью Freicoin</numerusform>
+            <numerusform>%n активное соединение с сетью NiCoIn</numerusform>
+            <numerusform>%n активных соединения с сетью NiCoIn</numerusform>
+            <numerusform>%n активных соединений с сетью NiCoIn</numerusform>
         </translation>
     </message>
     <message>
@@ -722,8 +722,8 @@ Address: %4
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid Freicoin address or malformed URI parameters.</source>
-        <translation>URI не может быть разобран! Это может быть вызвано неправильным адресом Freicoin или плохо сформированными параметрами URI.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid NiCoIn address or malformed URI parameters.</source>
+        <translation>URI не может быть разобран! Это может быть вызвано неправильным адресом NiCoIn или плохо сформированными параметрами URI.</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -766,8 +766,8 @@ Address: %4
     <message>
         <location line="+0"/>
         <location line="+12"/>
-        <source>Freicoin-Qt</source>
-        <translation>Freicoin-Qt</translation>
+        <source>NiCoIn-Qt</source>
+        <translation>NiCoIn-Qt</translation>
     </message>
     <message>
         <location line="-10"/>
@@ -839,13 +839,13 @@ Address: %4
     </message>
     <message>
         <location line="-43"/>
-        <source>Automatically start Freicoin after logging in to the system.</source>
-        <translation>Автоматически запускать Freicoin после входа в систему.</translation>
+        <source>Automatically start NiCoIn after logging in to the system.</source>
+        <translation>Автоматически запускать NiCoIn после входа в систему.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Freicoin on system login</source>
-        <translation>&amp;Запускать Freicoin при входе в систему</translation>
+        <source>&amp;Start NiCoIn on system login</source>
+        <translation>&amp;Запускать NiCoIn при входе в систему</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -854,13 +854,13 @@ Address: %4
     </message>
     <message>
         <location line="+27"/>
-        <source>Automatically open the Freicoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Автоматически открывать клиентский порт Freicoin на роутере. Это работает если ваш роутер поддерживает UPnP и его поддержка включена.</translation>
+        <source>Automatically open the NiCoIn client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Автоматически открывать клиентский порт NiCoIn на роутере. Это работает если ваш роутер поддерживает UPnP и его поддержка включена.</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>Connect to the Freicoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Соединяться с сетью Freicoin через SOCKS прокси (например при использовании Tor)</translation>
+        <source>Connect to the NiCoIn network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Соединяться с сетью NiCoIn через SOCKS прокси (например при использовании Tor)</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -929,13 +929,13 @@ Address: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Freicoin.</source>
-        <translation>Здесь может быть установлен язык пользовательского интерфейса. Настройка будет применена после перезапуска Freicoin.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting NiCoIn.</source>
+        <translation>Здесь может быть установлен язык пользовательского интерфейса. Настройка будет применена после перезапуска NiCoIn.</translation>
     </message>
     <message>
         <location line="+33"/>
-        <source>Whether to show Freicoin addresses in the transaction list or not.</source>
-        <translation>Показывать Freicoin адрес в списке операций или нет.</translation>
+        <source>Whether to show NiCoIn addresses in the transaction list or not.</source>
+        <translation>Показывать NiCoIn адрес в списке операций или нет.</translation>
     </message>
     <message>
         <location line="-22"/>
@@ -986,8 +986,8 @@ Address: %4
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Freicoin.</source>
-        <translation>Эта установка будет применена после перезапуска Freicoin.</translation>
+        <source>This setting will take effect after restarting NiCoIn.</source>
+        <translation>Эта установка будет применена после перезапуска NiCoIn.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1025,8 +1025,8 @@ Address: %4
     <message>
         <location line="+7"/>
         <location line="+183"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Freicoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Отображаемая информация может быть устаревшей. Ваш кошелек автоматически синхронизируется с сетью Freicoin после установления соединения, но этот процесс еще не завершился.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the NiCoIn network after a connection is established, but this process has not completed yet.</source>
+        <translation>Отображаемая информация может быть устаревшей. Ваш кошелек автоматически синхронизируется с сетью NiCoIn после установления соединения, но этот процесс еще не завершился.</translation>
     </message>
     <message>
         <location line="-66"/>
@@ -1156,13 +1156,13 @@ Address: %4
     </message>
     <message>
         <location line="-10"/>
-        <source>Freicoin - Debug window</source>
-        <translation>Freicoin - окно отладки</translation>
+        <source>NiCoIn - Debug window</source>
+        <translation>NiCoIn - окно отладки</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Freicoin Core</source>
-        <translation>Ядро Freicoin</translation>
+        <source>NiCoIn Core</source>
+        <translation>Ядро NiCoIn</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -1211,8 +1211,8 @@ Address: %4
     </message>
     <message>
         <location line="+49"/>
-        <source>Open the Freicoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Открыть отладочный файл Freicoin из текущего каталога. Это может занять несколько секунд для файлов большого размера.</translation>
+        <source>Open the NiCoIn debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Открыть отладочный файл NiCoIn из текущего каталога. Это может занять несколько секунд для файлов большого размера.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1226,8 +1226,8 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Freicoin-Qt help message to get a list with possible Freicoin command-line options.</source>
-        <translation>Показать окно помощи Freicoin-Qt для получения списка возможных параметров командной строки Freicoin.</translation>
+        <source>Show the NiCoIn-Qt help message to get a list with possible NiCoIn command-line options.</source>
+        <translation>Показать окно помощи NiCoIn-Qt для получения списка возможных параметров командной строки NiCoIn.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1256,8 +1256,8 @@ Address: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-33"/>
-        <source>Welcome to the Freicoin RPC console.</source>
-        <translation>Добро пожаловать в RPC консоль Freicoin.</translation>
+        <source>Welcome to the NiCoIn RPC console.</source>
+        <translation>Добро пожаловать в RPC консоль NiCoIn.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1311,8 +1311,8 @@ Address: %4
     </message>
     <message>
         <location line="+10"/>
-        <source>123.456 FRC</source>
-        <translation>123.456 FRC</translation>
+        <source>123.456 NCI</source>
+        <translation>123.456 NCI</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -1445,8 +1445,8 @@ Address: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Freicoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Введите адрес Freicoin (например 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a NiCoIn address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation>Введите адрес NiCoIn (например 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
 </context>
 <context>
@@ -1511,8 +1511,8 @@ Address: %4
     </message>
     <message>
         <location line="+14"/>
-        <source>Sign the message to prove you own this Freicoin address</source>
-        <translation>Подписать сообщение для доказательства владения адресом Freicoin</translation>
+        <source>Sign the message to prove you own this NiCoIn address</source>
+        <translation>Подписать сообщение для доказательства владения адресом NiCoIn</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -1522,8 +1522,8 @@ Address: %4
     </message>
     <message>
         <location line="-20"/>
-        <source>Verify the message to ensure it was signed with the specified Freicoin address</source>
-        <translation>Проверить сообщение для удостоверения, что оно было подписано указанным адресом Freicoin</translation>
+        <source>Verify the message to ensure it was signed with the specified NiCoIn address</source>
+        <translation>Проверить сообщение для удостоверения, что оно было подписано указанным адресом NiCoIn</translation>
     </message>
     <message>
         <location line="-129"/>
@@ -1559,13 +1559,13 @@ Address: %4
     <message>
         <location line="-1"/>
         <location line="+3"/>
-        <source>Enter a Freicoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Введите адрес Freicoin (например. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a NiCoIn address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation>Введите адрес NiCoIn (например. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Enter Freicoin signature</source>
-        <translation>Введите подпись Freicoin</translation>
+        <source>Enter NiCoIn signature</source>
+        <translation>Введите подпись NiCoIn</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2152,13 +2152,13 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>freicoin-core</name>
+    <name>nicoin-core</name>
     <message>
-        <location filename="../freicoinstrings.cpp" line="+9"/>
+        <location filename="../nicoinstrings.cpp" line="+9"/>
         <source>%s, you must set a rpcpassword in the configuration file:
  %s
 It is recommended you use the following random password:
-rpcuser=freicoinrpc
+rpcuser=nicoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 If the file does not exist, create it with owner-readable-only file permissions.
@@ -2166,7 +2166,7 @@ If the file does not exist, create it with owner-readable-only file permissions.
         <translation>%s, вы должны установить rpcpassword в конфигурационном файле:
  %s
 Рекомендуется использовать следующий случайный пароль:
-rpcuser=freicoinrpc
+rpcuser=nicoinrpc
 rpcpassword=%s
 (вам не нужно его запоминать)
 Если файл не существует, создайте его с правом чтения только для владельца.
@@ -2189,8 +2189,8 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s.  Freicoin is probably already running.</source>
-        <translation>Невозможно создать блокировку на каталоге данных %s.  Freicoin возможно уже запущен.</translation>
+        <source>Cannot obtain a lock on data directory %s.  NiCoIn is probably already running.</source>
+        <translation>Невозможно создать блокировку на каталоге данных %s.  NiCoIn возможно уже запущен.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2234,8 +2234,8 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+3"/>
-        <source>Unable to bind to %s on this computer. Freicoin is probably already running.</source>
-        <translation>Невозможно привязаться к %s на этом компьютере. Freicoin возможно уже запущен.</translation>
+        <source>Unable to bind to %s on this computer. NiCoIn is probably already running.</source>
+        <translation>Невозможно привязаться к %s на этом компьютере. NiCoIn возможно уже запущен.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2249,8 +2249,8 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Freicoin will not work properly.</source>
-        <translation>Предупреждение: пожалуйста проверьте, что время и дата на вашем компьютере выставлены правильно! Если ваши часы сбились, Freicoin не сможет корректно функционировать.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong NiCoIn will not work properly.</source>
+        <translation>Предупреждение: пожалуйста проверьте, что время и дата на вашем компьютере выставлены правильно! Если ваши часы сбились, NiCoIn не сможет корректно функционировать.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2383,8 +2383,8 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Freicoin</source>
-        <translation>Ошибка загрузки wallet.dat: кошелек требует новую версию Freicoin</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of NiCoIn</source>
+        <translation>Ошибка загрузки wallet.dat: кошелек требует новую версию NiCoIn</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2428,13 +2428,13 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location line="+1"/>
-        <source>Freicoin version</source>
-        <translation>Freicoin версии</translation>
+        <source>NiCoIn version</source>
+        <translation>NiCoIn версии</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Freicoin</source>
-        <translation>Freicoin</translation>
+        <source>NiCoIn</source>
+        <translation>NiCoIn</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2593,8 +2593,8 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or freicoind</source>
-        <translation>Отправить команду для -server или freicoind</translation>
+        <source>Send command to -server or nicoind</source>
+        <translation>Отправить команду для -server или nicoind</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2658,8 +2658,8 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify configuration file (default: freicoin.conf)</source>
-        <translation>Указать файл конфигурации (по умолчанию: freicoin.conf)</translation>
+        <source>Specify configuration file (default: nicoin.conf)</source>
+        <translation>Указать файл конфигурации (по умолчанию: nicoin.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2673,8 +2673,8 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: freicoind.pid)</source>
-        <translation>Указать файл идентификатора процесса (по умолчанию: freicoind.pid)</translation>
+        <source>Specify pid file (default: nicoind.pid)</source>
+        <translation>Указать файл идентификатора процесса (по умолчанию: nicoind.pid)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2758,8 +2758,8 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart Freicoin to complete</source>
-        <translation>Кошелек необходимо переписать: перезапустите Freicoin для завершения</translation>
+        <source>Wallet needed to be rewritten: restart NiCoIn to complete</source>
+        <translation>Кошелек необходимо переписать: перезапустите NiCoIn для завершения</translation>
     </message>
     <message>
         <location line="+1"/>

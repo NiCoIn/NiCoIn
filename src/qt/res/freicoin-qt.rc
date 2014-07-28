@@ -1,4 +1,4 @@
-IDI_ICON1 ICON DISCARDABLE "icons/freicoin.ico"
+IDI_ICON1 ICON DISCARDABLE "icons/nicoin.ico"
 
 #include <windows.h>             // needed for VERSIONINFO
 #include "../../clientversion.h" // holds the needed client version information
@@ -18,14 +18,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Freicoin"
-            VALUE "FileDescription",    "Freicoin-Qt (OSS GUI client for Freicoin)"
+            VALUE "CompanyName",        "NiCoIn"
+            VALUE "FileDescription",    "NiCoIn-Qt (OSS GUI client for NiCoIn)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "freicoin-qt"
-            VALUE "LegalCopyright",     "2009-2012 The Bitcoin & Freicoin developers"
+            VALUE "InternalName",       "nicoin-qt"
+            VALUE "LegalCopyright",     "2009-2012 The Bitcoin & NiCoIn developers"
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "freicoin-qt.exe"
-            VALUE "ProductName",        "Freicoin-Qt"
+            VALUE "OriginalFilename",   "nicoin-qt.exe"
+            VALUE "ProductName",        "NiCoIn-Qt"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

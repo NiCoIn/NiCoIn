@@ -50,7 +50,7 @@ map<uint256, map<uint256, CDataStream*> > mapOrphanTransactionsByPrev;
 // Constant stuff for coinbase transactions we create:
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "Freicoin Signed Message:\n";
+const string strMessageMagic = "NiCoIn Signed Message:\n";
 
 double dHashesPerSec;
 int64 nHPSTimerStart;
@@ -983,327 +983,327 @@ mpq static GetInitialDistributionAmount(int nHeight)
 
 CBudget static GetInitialDistributionBudget(int nHeight)
 {
-    static CFreicoinAddress vAddresses[320] = {
-        CFreicoinAddress("1DCyWRmTXB9goqA4Zb88nU1Q8snA7d7n4x"),
-        CFreicoinAddress("1LoFvV5YJsSMkpyPLizqyWH8KAkevV2XwJ"),
-        CFreicoinAddress("1JTUD2rB3FvbNFPw7cvCdTVDM9nuZTw7Jk"),
-        CFreicoinAddress("18w4xQQj2iXwtq9smYkEAJrWVz4jQNU4xd"),
-        CFreicoinAddress("16vdGLyxdYgSCT9xAng9Js7KrsnrUHsyG2"),
-        CFreicoinAddress("1Lo8mmskrLnvCuthadVaRS4K7WUSFpWAwj"),
-        CFreicoinAddress("1J1irQQ3ZWoTPct989Nnzdtu6WjfCjQcWs"),
-        CFreicoinAddress("1MME2u4V2ZiU6uUVJXTZMg5sQXAyMBUNXt"),
-        CFreicoinAddress("1CT3kUDi3rvma8R7Jwbz7puATSU3xzfLHz"),
-        CFreicoinAddress("1CLupi58K9XHVeWZ8jwbWiY4Ns46mPALbe"),
-        CFreicoinAddress("16A8XoWWvtJrDE1AdYQoLxAQcoLQML9gjz"),
-        CFreicoinAddress("1NwgZoUnudfmbQ99xDRdvrYskgjQ7KBt1Z"),
-        CFreicoinAddress("17CDPam7M59JM6vK5xzh1vUGKjYT9Byi5S"),
-        CFreicoinAddress("1PyKZKfquWcu3PFzKbvmKZ2oJWXbmbsWdB"),
-        CFreicoinAddress("186LbdeaDsn4Y5zrLN9cfSHWpQPSHtLbgC"),
-        CFreicoinAddress("1MrQWWNKfVseYyGkyyLsDhFekJWGJNt2i9"),
-        CFreicoinAddress("1EAUtv6YfvcRUrU5SncdZ27aSJ6SBNJH67"),
-        CFreicoinAddress("1DuSbRKB1GL9cBeJLYsuh3DADdwJgvHAQN"),
-        CFreicoinAddress("1MPdcnGXHsjR6rFSBUMm4ui44q8Ra1fYRT"),
-        CFreicoinAddress("1Ntv6bDFj8eQnXjawcatnJjJTowo1BA8rF"),
-        CFreicoinAddress("14j9vnqn6FZwPZmwdvGSuESm1m3oQsHP5y"),
-        CFreicoinAddress("1C679HkKyki9rN8tJvtMNyXGLedPdo8zbb"),
-        CFreicoinAddress("1EMKZYHTcnpHVUJx4dUp5Jne2ePQKjpdTm"),
-        CFreicoinAddress("1PmgFAV835znVpUwGkLkvJrKc4ZzBqixNX"),
-        CFreicoinAddress("16zKbgjQDqua6xjrXLhCbPGFrpr8UJxf4x"),
-        CFreicoinAddress("1KPurbuUH5D6HRe3Y148kUbRjDyFCCm3VH"),
-        CFreicoinAddress("1GVyWAXxP9tgZbj8iDSQqQ5tcN36uJ3F1s"),
-        CFreicoinAddress("1E5udyBXuBt1e8c2R27AvSTdp8H7LEhmxr"),
-        CFreicoinAddress("1hQcLTTD7KiFxiojvSrrrj8Y1w2gF5bHE"),
-        CFreicoinAddress("17BJ1oZdZJS64curVAL6rN1yYN7YiNVXpR"),
-        CFreicoinAddress("1LotiV7qGfAZhVV36XtrixnEfHCiuqe39e"),
-        CFreicoinAddress("1Q5yedqC3adLpNjbY4CWMxPojoxnSCVGjw"),
-        CFreicoinAddress("1FpBGhBWn7WDZr9nP47qG3DktJbaY7P48P"),
-        CFreicoinAddress("1H6Nh8dRPZjMm3KViuW5ZESjRwqYnQ36nt"),
-        CFreicoinAddress("1NAAKtpk7VRRUtA5ja8YxCZQaisXQ28HqA"),
-        CFreicoinAddress("1JKxed9uYfvcPgjGdo1GQXwMQJkAnap34G"),
-        CFreicoinAddress("1DZ58aSGD13QfUa118rtvfKrJiVPAoxdV8"),
-        CFreicoinAddress("12wnNuaQHbLyThJVJvfePhV8UwQEWURLLP"),
-        CFreicoinAddress("16f8S6f6ZDX3N1JG2DL5kyz9KCzmwpGgt7"),
-        CFreicoinAddress("1PPKwAUZ6g5wWiopfyJKJZn3xUFcrJbSBF"),
-        CFreicoinAddress("18DzCPRpU1Y2o5FsuuvcScZaYSi2ZBTVFr"),
-        CFreicoinAddress("1E5fy7csgbN5G9ENRwvSwGSAibLdLk52pe"),
-        CFreicoinAddress("1Dapd3WLAz1jm91FpNThHamXeMjDU4TJgJ"),
-        CFreicoinAddress("15HQuReQzSQ1mrHWy3iYELyJLjGNe9gNEZ"),
-        CFreicoinAddress("1DcJhNQJLkDrSmrvATciEaf95ZvnhFFUF7"),
-        CFreicoinAddress("1ErNVYRnGQpzFmxkXYnqR4LbcCViby7Rfi"),
-        CFreicoinAddress("1D1CmGn3BCM5rviTxZEfc7NhozAetePkit"),
-        CFreicoinAddress("1Af3dbEWMK5VuMkUozepYPQgMeVtmKtvW9"),
-        CFreicoinAddress("1JY2W5m4jsYzY2YYXU6RRKDmobE3BYEbgA"),
-        CFreicoinAddress("1PdTBBm2xhCoUY4A6cfYCopaFDsFyTf4MY"),
-        CFreicoinAddress("1Fe51wUzrhyGmag9UXmzEsr6jSyWqcATAM"),
-        CFreicoinAddress("1kyb1A5jWYP49YTkoN2y3JFQuNp1S2gXa"),
-        CFreicoinAddress("1FxZ7fmDQmauMASYVuVcHeajGZQKrQ1UWB"),
-        CFreicoinAddress("1EwtDpNLPmUZNLFmGMmNTwviUVe3DuTFKt"),
-        CFreicoinAddress("1NYRPya8KWUfiSr8fXxccPoDMmBw2Uqj1y"),
-        CFreicoinAddress("16vQMSBZK7iy5HDFfeiP2WomfpGfSEPJx5"),
-        CFreicoinAddress("12E9bCLYb9uzh2MHhpsyR89V3eLXZp5afr"),
-        CFreicoinAddress("1EA4NJjMXSgVNsNgEc7nSyRf3epjp3ABrQ"),
-        CFreicoinAddress("1NN442B74LAsXUMUFZSriWZCUh8b5ECFR9"),
-        CFreicoinAddress("1EMaEQmjjDCjgu3auEam5ABQ1J9ZtdLdpV"),
-        CFreicoinAddress("1RYXoGz2cHTGsYC5zZdDwpCdGRj4aBdAX"),
-        CFreicoinAddress("19aDWt7kBf53uLANiWnLFnWo5CqASh79mi"),
-        CFreicoinAddress("1LDEniSxXknXLHT1BMWpFsBM3PQcgn1nYz"),
-        CFreicoinAddress("1Q4Lji94eWCC9xBzwrbRE9yTMYS5fdKg9z"),
-        CFreicoinAddress("16fQVYur5CVMq9VfNLYypKXNeTmvWnDKsz"),
-        CFreicoinAddress("1Mc3r8pCpuRiHhkD3DrWf89CUnZb6xbFbg"),
-        CFreicoinAddress("18oEnf5iR9CD2HFDc9Yr8kD7m5CrJVWRkv"),
-        CFreicoinAddress("12VDq99L8UQWr8Waqo4GreEGCEBnkxMaXy"),
-        CFreicoinAddress("1H7PxhMmvqiRT8NDEkSFjfDekRLQ65CqBN"),
-        CFreicoinAddress("17yC59RcpYsw7jX3Zw7c48AcWtJqaHUwAr"),
-        CFreicoinAddress("1AFT16ksWdqdjhk56gFDaRnr7vS4XCVtyQ"),
-        CFreicoinAddress("1G84MZVqN54QTD47YWWmimy9htaj1WC58U"),
-        CFreicoinAddress("13YcisL6YyUG5nqegyqyrL6pVtrMqGYtcq"),
-        CFreicoinAddress("1NYdmagVHfbqTgW4hYJKS2YnWrJzCnSsvZ"),
-        CFreicoinAddress("1PumqgHPLUjPKfddgwJA46D5GBdYgT8myg"),
-        CFreicoinAddress("1PFKxU6g1kQayDwvpiLX2vJgUghMqJz9Ck"),
-        CFreicoinAddress("154ENKy3HuYoN8xARVaxp61NUAt5GEknDj"),
-        CFreicoinAddress("12CJ8BD8L8tQXjrpy4UfjJwCCtoL6vsegD"),
-        CFreicoinAddress("1LXCWYJ6k7EG2Bi8rLh2jhV94L4G768yTa"),
-        CFreicoinAddress("1K1rbcUFmE7XScTsqiNEiJHyX69eqbZdDB"),
-        CFreicoinAddress("1uZZzXiu8n7eL96rcFWh9MvcqerYxaGce"),
-        CFreicoinAddress("1JidqtE1YHwXFC1utxPAp17RkM3rUqwULk"),
-        CFreicoinAddress("1PuMwPqNLLYi1sPxvJToid2EsfiP4xPfo6"),
-        CFreicoinAddress("14ZSJRvSdgYFA1xUM2txnQKdMXMfsEWvuJ"),
-        CFreicoinAddress("1D9RJw7p5zgz4JeWvVzYxBsAkvucRMiXfG"),
-        CFreicoinAddress("1JRpRLZgcfNNeVEwGQmYZw5nv7Aq3KVx5x"),
-        CFreicoinAddress("17Rqyx39YnpFN23dPE3CWRPC8JhuBVKktx"),
-        CFreicoinAddress("19pozj4JeWd6rpMDeTpx8d1Dv4rebhUkvT"),
-        CFreicoinAddress("15jULtTPTzXHr9ezTMFbaPJojbuYFrbrQp"),
-        CFreicoinAddress("19dfCSTERPh5j4XtYoJatjdjD9afReeY3s"),
-        CFreicoinAddress("1LgzNc1Sfbu8BaxKUESGbNzCNnpqvhpCi4"),
-        CFreicoinAddress("1HTvoZUUNncPkjjv17xHLEtncdrgcdnN46"),
-        CFreicoinAddress("1NHvSZWwk8RtgPvfhzykpvebQnVk1Q5XxX"),
-        CFreicoinAddress("1AzdeDfjz5C5yT6wVxurgS8QPkZviHvY8N"),
-        CFreicoinAddress("1BdFwnfS84uDeZn4sojUs5ZC8fSkx9o2XG"),
-        CFreicoinAddress("1AgCAgvQZPQTkdMg853SkM2WdRzN4Q2ATw"),
-        CFreicoinAddress("1JABYERsgkAYincsgCpic7MwV63iM19iXp"),
-        CFreicoinAddress("1JFudqZDUkBMdV4ShLmhxLD7sfNEYdBQCE"),
-        CFreicoinAddress("1Pqf48Skyxt77RNVwTLxUhA2BNCscaHJKa"),
-        CFreicoinAddress("1AtdTwFFYZJrUUSWbBLBCkodRcnqwb1a6G"),
-        CFreicoinAddress("14iezrH1nR9TjGtnywFPqBHbwYcEhwz8y9"),
-        CFreicoinAddress("16x2aavFb2AHKntUnzA3HC2wmi921YJn4i"),
-        CFreicoinAddress("1HovjtiToM6f2xV3Sxg4fxfvSYPCGGEXLe"),
-        CFreicoinAddress("1MNrqZyo7poywLPVap6PsmmT5CS4f8hyWq"),
-        CFreicoinAddress("1F6PzQRW2MPfCYvzgeUXoBXaEikH3E5zMk"),
-        CFreicoinAddress("1F2SpgUakBvx6aNgJiCtEZHnTqVWeQcoMk"),
-        CFreicoinAddress("13iTRwxSLGC17fzumSrRidaXe8v8awdDux"),
-        CFreicoinAddress("1KuyBiZBdXVq8oNGAPWEqWiFi2RyH8rvwd"),
-        CFreicoinAddress("1HdXmhHKkkzpn1UKmhBWFzQMYsUqxUuVZ9"),
-        CFreicoinAddress("1Dw9jXoWc5MsEH3uLB9pi98qeyijUrvWU3"),
-        CFreicoinAddress("15mW5WsusPo6LAAYLqa6ngFfQ1jX51v3Bn"),
-        CFreicoinAddress("1DFfarcjskvSi2w56msV4JeeVZqtuwEL9p"),
-        CFreicoinAddress("12SeGWd2txi4fdQKoFXsTdd2fgjDbABWyb"),
-        CFreicoinAddress("1MoENmjtakS8XTHcwsbVFeJkjEckMhS3xm"),
-        CFreicoinAddress("167pv4Hn53XQ4hFhyNtEyP36n8HrL3NU3j"),
-        CFreicoinAddress("1E6WgpC4bmYJagvsTzhRxZ1Z8sRSsQjmJX"),
-        CFreicoinAddress("1EFkVCzezsZCq56JWSBRf3Dy6tafFRxh4N"),
-        CFreicoinAddress("1KnKZwDb44Qf3Lutda2T85uFZiTZwe2v2C"),
-        CFreicoinAddress("1CLpF2fLukzBHard43mXLEXxz11gFK5dc9"),
-        CFreicoinAddress("1DXSfPi1Tj6tQ5qf5M6Yj6cpNmLfPKMwr1"),
-        CFreicoinAddress("16nHP74UsqeHewM1yUhNCL3zCjkWnqFt8g"),
-        CFreicoinAddress("1FeqXkG9jGEDcPaKJV8rdh4NbqTjbdvN4a"),
-        CFreicoinAddress("1LwwjmsoDtQ1Zh9N8doGMczP1TJnes2YoZ"),
-        CFreicoinAddress("1DgusdNgB6nRD2emfwURMmk33LrB7Wp95c"),
-        CFreicoinAddress("17kjPofVVmhZAWXnrVwfqizGtXWBufWwbf"),
-        CFreicoinAddress("1EnLHA3U15wXehXAC24W587EEaeyUcaA6K"),
-        CFreicoinAddress("1MwpkFtEwrAQNbsmbt4kB9WtoB8mFLXZ44"),
-        CFreicoinAddress("12iQRcVoRCbFNvoQARM3rufTkd7jXpHZEm"),
-        CFreicoinAddress("19zK2WFDkaHZfWa4uS5mzF2XD1KrZEMxy2"),
-        CFreicoinAddress("12Zs8LtRY1cTS3HKw1gwPzYjB1Ar6Er93R"),
-        CFreicoinAddress("1KDVcQhjZuX39Fvv8QbrSpaSycMA4YdPkU"),
-        CFreicoinAddress("1AT6rxNBT8sasYKrKm9fv7LdjXBS89Wewh"),
-        CFreicoinAddress("19YjbLEUgqV8joQMgijDWZoY1inwXf1hXc"),
-        CFreicoinAddress("1EpHQ43BkzmKYMiYwmRRKEXQidpgA499px"),
-        CFreicoinAddress("13bQP93mmUFtUGVuBEwZ9ymdbCC9yywgdL"),
-        CFreicoinAddress("1GatPyGkCX5YUW4f2QHJk1PzwspCRz9b3J"),
-        CFreicoinAddress("1Jk8sCUfHVE6VpwkkTG9qaYYS9u1zMmQAs"),
-        CFreicoinAddress("13N4Eiv2KiX4PeFwiWnC847JBv4TP2sn1Z"),
-        CFreicoinAddress("1ESzED9saJ3bVB6BbVSTFGDxRLnTgWRVDC"),
-        CFreicoinAddress("1CspvzG7HyuNXRLsaWnpsLXPDwkeDKd4mm"),
-        CFreicoinAddress("14Rs4fo9tK39kyEFoAjbvkcgGZ6k356t3T"),
-        CFreicoinAddress("1D6jgPJYoFhbY7gJjNMAbyfJzBGVtqSc1o"),
-        CFreicoinAddress("16MHoaVyYQgPU525fz2auJpK6JVyFKEiz1"),
-        CFreicoinAddress("1FfS9TQswYZHYDNkUmncRAYjYJkLzGncp5"),
-        CFreicoinAddress("14PXPSEjNjWAuqYa63RBT6gewnomE9saRu"),
-        CFreicoinAddress("1CHBBtBCRQz1TFyE12g8RbGPZ6UzX2AieC"),
-        CFreicoinAddress("1CMwT1jzfoe9VvURpZanaXVQobMQLr13W8"),
-        CFreicoinAddress("1696KNrMvHvnthPLZnGuYGY96UbEqLeXz6"),
-        CFreicoinAddress("1A7TQi9sMiNQX8uwwqFb8eqaXnpTJY4WYg"),
-        CFreicoinAddress("1GNuX6AN2KCF1AWtxAT9QYD6QRJubRvKaz"),
-        CFreicoinAddress("16L3CvHeZcZcr3wPhoEC3ZsMLN7YTonMTQ"),
-        CFreicoinAddress("1EnqRdqx1VZyfc5ia4pcmZstBcGdW8FGxn"),
-        CFreicoinAddress("1MQ1QeCMZhxFCgReGEPRS2Qy74FaPqFccW"),
-        CFreicoinAddress("16Za6Rn8dCmM8gctXQtwN1yQ2WXnhHsSgs"),
-        CFreicoinAddress("15k38dy86CRnirMY9Q1niVmfn7nfXTmppL"),
-        CFreicoinAddress("1MQsruCXBjCZzTZKKpPwcC74ztetbtAw4E"),
-        CFreicoinAddress("1cmAt63c4ZAqRe2fBQTYs5Jyx41fiBbhQ"),
-        CFreicoinAddress("1PBCaowV7gQM6Lj1NfSpH2TnHHmqXcYTsC"),
-        CFreicoinAddress("1841uXFc2kUTUogCDJwp4U1NPjSPqsg69x"),
-        CFreicoinAddress("1XNo9kDMM6uqvf9yCWmqj17rukC8abjtb"),
-        CFreicoinAddress("1A4kHAe6rNz1q8G6dYjNMyWzgVv4DxYget"),
-        CFreicoinAddress("18Y6y6zcJrG5j2RjmGqsUvtWkZhnTvRka7"),
-        CFreicoinAddress("1DkcMkHWUUVjXgAu2MFXVkUuwZ6JWv64cz"),
-        CFreicoinAddress("1JvXTyBxhjE9mERWEFnqeuAPgbJSi25qGd"),
-        CFreicoinAddress("1FHus2MsM8k4oKHt22YFYeoFkf65kxQFP3"),
-        CFreicoinAddress("18HLkAhrzeNsaMB3MY1xUGW7wkzjWGobT7"),
-        CFreicoinAddress("1AF7KmTRrS3mMxop2Viop1MctrNJmPAHQt"),
-        CFreicoinAddress("13g4rWjU2PK4eN9D9XXo4jRB84RiJ2hD7o"),
-        CFreicoinAddress("1EWUiUoxZXfTbZXDZGueag7XRnv5Mej8ZZ"),
-        CFreicoinAddress("1LuuGk4tyd4USQqtYypemjt5vs3VRqV1QU"),
-        CFreicoinAddress("15eUUDUYDuiKnt9xNbzhNFmorCK9F9mJb2"),
-        CFreicoinAddress("1HGzWgdrNAKsE9nE1GHtUvaXHNzvwTyPQX"),
-        CFreicoinAddress("11MhmCVmFszm6yTTwaK2dypwcLaybmCjp"),
-        CFreicoinAddress("1s9XWpGPQqhbog1S6xgGqcVnfvnLMAueZ"),
-        CFreicoinAddress("16f3tHcuRavx3tSWCM2jnnCX5jGa2vJe9Q"),
-        CFreicoinAddress("15NWaghRx51ravYTUqsnBF2hQFQeSHtTvS"),
-        CFreicoinAddress("1QGUUgikmqCinDQn3vfqx9q6mnT5ekA4BG"),
-        CFreicoinAddress("134WvpvyZUveYc98CmtWZc1oBBXdrV1GuU"),
-        CFreicoinAddress("1LqNfcDBn7eytc7Ln6fLrCDLkYeMa6R9dV"),
-        CFreicoinAddress("14xbponjm6rXp8cNzTJmtCJwvwvDuKvaCD"),
-        CFreicoinAddress("14D7JyUrv1HeSD7FCc8WupmbxUiGyfC7uC"),
-        CFreicoinAddress("1ER6GhDJokhBjB73DWDTdC2BP2J9DiqD1o"),
-        CFreicoinAddress("13Q3or3Hew7hBZzMoriz8LcMXwptqD5HEd"),
-        CFreicoinAddress("1HSyeVQEvdRwj2rutFN33cKu2tPzyGkgx2"),
-        CFreicoinAddress("1A1WaQQ6ZjXuEe2KYZNC3ycPg4X9czsR4D"),
-        CFreicoinAddress("1fhzxkMPY4hUYNywoQwyVGkinVKQrPJ2P"),
-        CFreicoinAddress("1Nf63BqwEmb7vU15bRfpvKEs5tMGZpR5Fi"),
-        CFreicoinAddress("1Gi6tjnRBecQovhRQVNmsPyVZYmphZerdg"),
-        CFreicoinAddress("1AJ87nhgSQkac9BUjEvbyWh8c95ciHLZWG"),
-        CFreicoinAddress("1WDyJLrJaLRePMtea6bAgADwzdpbW5nqd"),
-        CFreicoinAddress("1JTvhcJuxydevXw4ocUUteiPNWwPtMM56H"),
-        CFreicoinAddress("16X1LYmpxM2fPBjNTLbnPo2LdA6sB7fbNu"),
-        CFreicoinAddress("1315ZWhxgd6pqqTmvF21fxt5wzYvpcnZSm"),
-        CFreicoinAddress("17PWpyrUmkaCVPu6KXaWvuLLYvD9YU61RP"),
-        CFreicoinAddress("1PADxQpcx8Kvs3PprjYvM1wYFyjxB3tcs8"),
-        CFreicoinAddress("1BWyJmxybx3p1guhud8qxabrGbVLWaVNaM"),
-        CFreicoinAddress("17JpmLSEbXgmheAvTQ7iiBvR5TaSsM2Xgt"),
-        CFreicoinAddress("19oxMuyyipVsvxXWKBBrFmY8hQbWkiiVEv"),
-        CFreicoinAddress("16TvroBFWJmUN7VSHQLmyh6KiCri5QVTQu"),
-        CFreicoinAddress("1MXJR6XRoThY9rwvyvLkXWN17WN7rAQC4J"),
-        CFreicoinAddress("163N8CmDAf45CM6brXMpzg3AN2nkDXTuRt"),
-        CFreicoinAddress("1CWudCKLCxT5AXteLFeZRBDyb4moQH4cVL"),
-        CFreicoinAddress("1DYmgt2zpW2eNfyczC98aq76URHQMnfwZK"),
-        CFreicoinAddress("1JnE2YseXgBX4oHGo8VywsxnNkp52s6nkX"),
-        CFreicoinAddress("1D8WBBBCHhgLrMa8s3QU1bkRcRHEt8cNfv"),
-        CFreicoinAddress("1Fm5eoDvEZo4hyW4YEDu3q2gKbpCuo9hqw"),
-        CFreicoinAddress("18uRTixnVaKMz9tyoR6Ve6Rqdwtt8oZ1Zw"),
-        CFreicoinAddress("1FuByKdd2RK3hjc3UFeV56HvheyAMnjMMS"),
-        CFreicoinAddress("17nDqatJ7M6M9vFRa4BngCCLPGSJ6mfc8b"),
-        CFreicoinAddress("1G4qHkiaaVZwuLqwvh2itFjR18iThkeaDQ"),
-        CFreicoinAddress("18ZcHUg5wV4sSdd9pS7xv5rYsfx5D1hZWi"),
-        CFreicoinAddress("1CZU6UCZjtWueXQWYzyrFa4K7pTSeBQ8cw"),
-        CFreicoinAddress("19zRVJvXaXZvygqbHAP1ZKF5Rx9gq3Xh8u"),
-        CFreicoinAddress("1HQAyw9UUi2eiQHJcnbg5eeJTnv2QoEQqA"),
-        CFreicoinAddress("16eZAqdqypn47T8DwS1archd39uXqK8JQ8"),
-        CFreicoinAddress("19he5Hy915MbSZBvwHjB3LAm5UyLnmQ5TK"),
-        CFreicoinAddress("1CzGcY5JKDroUtdFdZJArGeEmKMEtyeAKw"),
-        CFreicoinAddress("1DzowkZrtEQgoDF8xgxjPBfLaBMeBHjNr2"),
-        CFreicoinAddress("16GA6zc9iTUB8o47oi7fbE88ayEi8C7w2r"),
-        CFreicoinAddress("1Mvp5TikHrzJetDMbjHkzAkP9rMBfQrais"),
-        CFreicoinAddress("1Lrbk1vrmCqVfajBqtwHD1x9x72jeDCon5"),
-        CFreicoinAddress("1AMDHRKUah3J8yESFt7NnoUXrM4ULHcUpN"),
-        CFreicoinAddress("1MbnTTv5FJX8RsK5tw9KjNx1VCvo94GEKK"),
-        CFreicoinAddress("1Hmbm1TUDuDwdVWkU1oiaReRRBTzb8fMDJ"),
-        CFreicoinAddress("15XYapuYSjaDc4uDXJsf3PF33YzSRs5P3M"),
-        CFreicoinAddress("1C3ovhhZwo73isNQPuKKD5VDm2XwByBkTK"),
-        CFreicoinAddress("16VJrBFjFjhLY93NihDvWqBpUeiXeL2FUi"),
-        CFreicoinAddress("1C9Niuy1cSW6a6g5tm8GhPsSML6ZtWeUQS"),
-        CFreicoinAddress("149937wZtsTvtwmixD33npnsnyUm5zjstX"),
-        CFreicoinAddress("1NkCKjPZUFecVWxLGnJbN7Fp8viJRG5Xg4"),
-        CFreicoinAddress("1MG3okwhF3YDwVWDcYsNr5ySA4eMtCATrK"),
-        CFreicoinAddress("1GtzbwNuHYBZaDRVpJGuDwjBQhSh5RBVRZ"),
-        CFreicoinAddress("1CJi6dja55AtGeuJX6WLFGTHsoofqZyDNu"),
-        CFreicoinAddress("1oftVXkjfpJSMKGnz1pps1xVWNUNNhAmq"),
-        CFreicoinAddress("168KgGGUEEx22eCNuSMjsKvn5chiZ5c217"),
-        CFreicoinAddress("1FmQzGLJFu3AvucwDEAjYRM4fPgiSZsT6Q"),
-        CFreicoinAddress("1F9t4EmWXy2Wui21LaMuZmRDwRCF38aDZN"),
-        CFreicoinAddress("19eFuss1dgxPdDfoAu6AsVmBUj5d2DUPu3"),
-        CFreicoinAddress("15Yr2PPbFGqbi2SZtZ59cvd5y2Es8atRE5"),
-        CFreicoinAddress("1Pz8oisCda5aJXtVVDo1mfxxvgymVNcmsM"),
-        CFreicoinAddress("1HkHQHNkjXp6VinoEG6a1i55NmreXC9yAX"),
-        CFreicoinAddress("12ShPmbsADZMacnr5u2DPxssKXjd3HaCZc"),
-        CFreicoinAddress("1BasQDDfZ677LF3mEAQUEFHvJexZ8ZxY47"),
-        CFreicoinAddress("1FVXTVaK3rwSrx67WGdNkNFwL5sVm81TEK"),
-        CFreicoinAddress("1NV8VjVBrkgCTJvyBHZumboXjPtSNZvRJX"),
-        CFreicoinAddress("1HVdN1BSusJZ42sSfJFHB2CJ6LcW5Fz31a"),
-        CFreicoinAddress("12j2yfUP2dNo3HwdrTDjMGZhzBcdhYvFj6"),
-        CFreicoinAddress("1BrWHBKCpvNYssq8Kj8yY6qvy7GqFgk8UP"),
-        CFreicoinAddress("1G3faUnBxMHwwX2uLn6dZJEj9pmJ2o5cnq"),
-        CFreicoinAddress("1Nq59Py1u73B26aTTRhZG3g9h5fmrmkeX9"),
-        CFreicoinAddress("1DMuz7B193myzVq4Kgg76Jb6Da2UjkAti"),
-        CFreicoinAddress("1124BMmAevhic3H1MQB3teQFhoVi7RVUhR"),
-        CFreicoinAddress("1B1hrgcDNfSuaKJi3oJ4cBtyysq2BpGFz8"),
-        CFreicoinAddress("18NE1w2soK6xGUYYvoTe7oEtRtQhxBLXCq"),
-        CFreicoinAddress("1MESy7CY2yTgxSERyejcvCGjK8Qm2EhE4g"),
-        CFreicoinAddress("1445Hs1Lgh9pPvD8mSt5oiGwTY8yT2sy9R"),
-        CFreicoinAddress("14pm2Fxwin4mwHqd5ujXAXTJJFuQ31qYUf"),
-        CFreicoinAddress("17UhQpeFQ3nCjj8PJKCrTWHnP8YSvrNM7h"),
-        CFreicoinAddress("15zVu5t8iURV2feuvmnHgYp9u7cxPC4XrN"),
-        CFreicoinAddress("19JriYALeNskNnvjYidpoNHNLegftkViqH"),
-        CFreicoinAddress("13mauBB6JYTPcfoWbNbCWKk4sNqmwxCXse"),
-        CFreicoinAddress("1LwRt9rpGaekbht7UAitg2ADmFtDrKThYV"),
-        CFreicoinAddress("15Z9wnxM6VxrRkqhLZpLskGRJ2dLRMEmCg"),
-        CFreicoinAddress("1GvQwfMSMRggmmFCRqf1EmvaG5U5sY4sKL"),
-        CFreicoinAddress("13iUoiiVq7C4fUmy94r1HEDf35YKwBAVXh"),
-        CFreicoinAddress("1ELZsnzgBmZSSxQQYuAANg8izDFTbzhbPB"),
-        CFreicoinAddress("13me2Z71XAtmkzggnqusdvuRiXZzFRGZBj"),
-        CFreicoinAddress("1KC7ECvdcofiYXJ63iUnvFrEH4zzhQZ2pB"),
-        CFreicoinAddress("1LtFLa3oaEBhmHQ5iXRvFqeNcrzU8GPNMM"),
-        CFreicoinAddress("1LNHH8DGXWQRyfmkSkaJcBkkiVxUhH8tBM"),
-        CFreicoinAddress("1Daw5kGzsqBhfRfMV6dAA4bgBZ2LBWS1nY"),
-        CFreicoinAddress("164XLENwRiappRPUP47sRTSyXtW8CAXVLi"),
-        CFreicoinAddress("1CFoTaknkFGADVo2rK92jwq18NWBzVcJGS"),
-        CFreicoinAddress("1MnrNuPrnuJFxYnkpKDqUymHGjb1d6qLVq"),
-        CFreicoinAddress("1BpwPwf8kUssmoMCoWnHCVY4wjBJi3CZyD"),
-        CFreicoinAddress("1jiJb2DU3DB6ujD8eV3DZXmnfwWaHti4y"),
-        CFreicoinAddress("1DqQnvWdtKvwBtePpCbDd8juZ9ZbeaKFdH"),
-        CFreicoinAddress("131D32PNpqqGtLGUaAaZePqpUdBTiy8Akh"),
-        CFreicoinAddress("16jK6KaY7Ub7fZ7YaBi94ZsygovzixnRNx"),
-        CFreicoinAddress("1EJx1ShX4UJVrzynP3oZw8wdLpSGC1KPrz"),
-        CFreicoinAddress("1899kFmma5FongtN9JfvFKqhwtbw2w9MDe"),
-        CFreicoinAddress("1FNNBK9SeDUufbbnmoagUFt7oKVbb65vaw"),
-        CFreicoinAddress("1LxF4pLjeSpNs4ux24MDduzCzrM2KCsE7M"),
-        CFreicoinAddress("1BZjVRe2CCA7G7qnG3beWWhG173f1mbNX2"),
-        CFreicoinAddress("1L5HWs7WrK457CzjAgnHghveFpQVv7rRTe"),
-        CFreicoinAddress("1Kp4bjG9nwbogd8WM62ijGG6onW9Wo4aYK"),
-        CFreicoinAddress("1hhvJ4QmB6RX12Bps9xhnMHCDDXTXAnDu"),
-        CFreicoinAddress("19xiuTYSm85gNsPZw8hGLS69e2DjVbCuAP"),
-        CFreicoinAddress("19WdcJU8Z1W3ZZnbpfDRbdrYGapxp1L5zo"),
-        CFreicoinAddress("121hT7w8DN3x1pYEowak7FjmNgihMNo2cd"),
-        CFreicoinAddress("1BtthjPb9GPKwgcJtrgZRQRWhiRSCHmyvk"),
-        CFreicoinAddress("1JKgRTkMgEodFFpPwoz9W6pejMN3x3J9X1"),
-        CFreicoinAddress("18zp4dHdouYqFn2qC4ttAva8cwqhZ4pm4K"),
-        CFreicoinAddress("1ELAVZKvGykuzRDCvFUsJTL4istYisbxpK"),
-        CFreicoinAddress("1PfULZdJniM8SutFdjoKvG3WLUwxZL2YUf"),
-        CFreicoinAddress("1DTbnuz4dPLdduseE3k5xr62eFAYjCSk3E"),
-        CFreicoinAddress("14jVGdWJRcqpdgWPAbbvhMfVnLha6MdnYU"),
-        CFreicoinAddress("1GBiMVjsqkcGxij2hGFQxVUX2WjDcr1Esf"),
-        CFreicoinAddress("1FGUuAuGRkSqEL8Besg33QsekxmBB75ZUH"),
-        CFreicoinAddress("19FsZeejdbfUKK21wENRdoR2BUowD4FsMZ"),
-        CFreicoinAddress("1LbBHWffmANdhcb1Wciv4jWwXPGrtVFhsU"),
-        CFreicoinAddress("1FT9PRuDmFKxZorYrfgibWaaBdKWv7PiB4"),
-        CFreicoinAddress("1FUvPJ3nXMUrFEWqkjxPe5esqQ2GoCmUAk"),
-        CFreicoinAddress("1LJLBDK8q7yLibK2oYTA6hbD9UpmP6U3QP"),
-        CFreicoinAddress("14E9GEg9T5N9aja1FV2ewNFjMK6wPEgsKb"),
-        CFreicoinAddress("1JYmABbYkUjAyowLwa1zoQj86PEWMBdeZP"),
-        CFreicoinAddress("1NCfTbrEsZrCT3Efyk5AfvqP2xY6NesWHy"),
-        CFreicoinAddress("1Bwd6rcgGLq8sdo3FHHSmh3J7ufqdgMeqi"),
-        CFreicoinAddress("1PzAWHEt2xabgWEki5hTgwtTyuKRS1at39"),
-        CFreicoinAddress("1Fo3r7DWDtJ8Yu2UqngNqKMSw98XgsXehW"),
-        CFreicoinAddress("1H1b6FLd5eqH8Q9Cw8UkZv2nY3xxKTfsH3"),
-        CFreicoinAddress("12x9TqiF9FQU7sqnRiCmrRZmG7dLs9hyG6"),
-        CFreicoinAddress("13VYYQ8K9AFiajev9QdHM6Kj8SqevRT7GS"),
-        CFreicoinAddress("149HFz2K7D4GffQm8t7rKQuWmcwJohsimk"),
-        CFreicoinAddress("1JqwkYTg3ZuWMpjhxrJYgW7E826HYoiBSG"),
-        CFreicoinAddress("1NiyjCKxM33nozwzU2LNtWBPWrWTUpiaAM"),
-        CFreicoinAddress("1LD4F5tA87e7nMwNRuHhgwH6zTFZ1LyoE2"),
-        CFreicoinAddress("1M3wUX9YYrcVSSw6Tncdoic3Fj13okQ63u"),
-        CFreicoinAddress("1PVKsqeVqM4B2ccq915GHeK3aDeruStr24"),
-        CFreicoinAddress("1PKNQqSuPknZ1PaqKkRqa9qYujWKL9KQ7E")
+    static CNiCoInAddress vAddresses[320] = {
+        CNiCoInAddress("1DCyWRmTXB9goqA4Zb88nU1Q8snA7d7n4x"),
+        CNiCoInAddress("1LoFvV5YJsSMkpyPLizqyWH8KAkevV2XwJ"),
+        CNiCoInAddress("1JTUD2rB3FvbNFPw7cvCdTVDM9nuZTw7Jk"),
+        CNiCoInAddress("18w4xQQj2iXwtq9smYkEAJrWVz4jQNU4xd"),
+        CNiCoInAddress("16vdGLyxdYgSCT9xAng9Js7KrsnrUHsyG2"),
+        CNiCoInAddress("1Lo8mmskrLnvCuthadVaRS4K7WUSFpWAwj"),
+        CNiCoInAddress("1J1irQQ3ZWoTPct989Nnzdtu6WjfCjQcWs"),
+        CNiCoInAddress("1MME2u4V2ZiU6uUVJXTZMg5sQXAyMBUNXt"),
+        CNiCoInAddress("1CT3kUDi3rvma8R7Jwbz7puATSU3xzfLHz"),
+        CNiCoInAddress("1CLupi58K9XHVeWZ8jwbWiY4Ns46mPALbe"),
+        CNiCoInAddress("16A8XoWWvtJrDE1AdYQoLxAQcoLQML9gjz"),
+        CNiCoInAddress("1NwgZoUnudfmbQ99xDRdvrYskgjQ7KBt1Z"),
+        CNiCoInAddress("17CDPam7M59JM6vK5xzh1vUGKjYT9Byi5S"),
+        CNiCoInAddress("1PyKZKfquWcu3PFzKbvmKZ2oJWXbmbsWdB"),
+        CNiCoInAddress("186LbdeaDsn4Y5zrLN9cfSHWpQPSHtLbgC"),
+        CNiCoInAddress("1MrQWWNKfVseYyGkyyLsDhFekJWGJNt2i9"),
+        CNiCoInAddress("1EAUtv6YfvcRUrU5SncdZ27aSJ6SBNJH67"),
+        CNiCoInAddress("1DuSbRKB1GL9cBeJLYsuh3DADdwJgvHAQN"),
+        CNiCoInAddress("1MPdcnGXHsjR6rFSBUMm4ui44q8Ra1fYRT"),
+        CNiCoInAddress("1Ntv6bDFj8eQnXjawcatnJjJTowo1BA8rF"),
+        CNiCoInAddress("14j9vnqn6FZwPZmwdvGSuESm1m3oQsHP5y"),
+        CNiCoInAddress("1C679HkKyki9rN8tJvtMNyXGLedPdo8zbb"),
+        CNiCoInAddress("1EMKZYHTcnpHVUJx4dUp5Jne2ePQKjpdTm"),
+        CNiCoInAddress("1PmgFAV835znVpUwGkLkvJrKc4ZzBqixNX"),
+        CNiCoInAddress("16zKbgjQDqua6xjrXLhCbPGFrpr8UJxf4x"),
+        CNiCoInAddress("1KPurbuUH5D6HRe3Y148kUbRjDyFCCm3VH"),
+        CNiCoInAddress("1GVyWAXxP9tgZbj8iDSQqQ5tcN36uJ3F1s"),
+        CNiCoInAddress("1E5udyBXuBt1e8c2R27AvSTdp8H7LEhmxr"),
+        CNiCoInAddress("1hQcLTTD7KiFxiojvSrrrj8Y1w2gF5bHE"),
+        CNiCoInAddress("17BJ1oZdZJS64curVAL6rN1yYN7YiNVXpR"),
+        CNiCoInAddress("1LotiV7qGfAZhVV36XtrixnEfHCiuqe39e"),
+        CNiCoInAddress("1Q5yedqC3adLpNjbY4CWMxPojoxnSCVGjw"),
+        CNiCoInAddress("1FpBGhBWn7WDZr9nP47qG3DktJbaY7P48P"),
+        CNiCoInAddress("1H6Nh8dRPZjMm3KViuW5ZESjRwqYnQ36nt"),
+        CNiCoInAddress("1NAAKtpk7VRRUtA5ja8YxCZQaisXQ28HqA"),
+        CNiCoInAddress("1JKxed9uYfvcPgjGdo1GQXwMQJkAnap34G"),
+        CNiCoInAddress("1DZ58aSGD13QfUa118rtvfKrJiVPAoxdV8"),
+        CNiCoInAddress("12wnNuaQHbLyThJVJvfePhV8UwQEWURLLP"),
+        CNiCoInAddress("16f8S6f6ZDX3N1JG2DL5kyz9KCzmwpGgt7"),
+        CNiCoInAddress("1PPKwAUZ6g5wWiopfyJKJZn3xUFcrJbSBF"),
+        CNiCoInAddress("18DzCPRpU1Y2o5FsuuvcScZaYSi2ZBTVFr"),
+        CNiCoInAddress("1E5fy7csgbN5G9ENRwvSwGSAibLdLk52pe"),
+        CNiCoInAddress("1Dapd3WLAz1jm91FpNThHamXeMjDU4TJgJ"),
+        CNiCoInAddress("15HQuReQzSQ1mrHWy3iYELyJLjGNe9gNEZ"),
+        CNiCoInAddress("1DcJhNQJLkDrSmrvATciEaf95ZvnhFFUF7"),
+        CNiCoInAddress("1ErNVYRnGQpzFmxkXYnqR4LbcCViby7Rfi"),
+        CNiCoInAddress("1D1CmGn3BCM5rviTxZEfc7NhozAetePkit"),
+        CNiCoInAddress("1Af3dbEWMK5VuMkUozepYPQgMeVtmKtvW9"),
+        CNiCoInAddress("1JY2W5m4jsYzY2YYXU6RRKDmobE3BYEbgA"),
+        CNiCoInAddress("1PdTBBm2xhCoUY4A6cfYCopaFDsFyTf4MY"),
+        CNiCoInAddress("1Fe51wUzrhyGmag9UXmzEsr6jSyWqcATAM"),
+        CNiCoInAddress("1kyb1A5jWYP49YTkoN2y3JFQuNp1S2gXa"),
+        CNiCoInAddress("1FxZ7fmDQmauMASYVuVcHeajGZQKrQ1UWB"),
+        CNiCoInAddress("1EwtDpNLPmUZNLFmGMmNTwviUVe3DuTFKt"),
+        CNiCoInAddress("1NYRPya8KWUfiSr8fXxccPoDMmBw2Uqj1y"),
+        CNiCoInAddress("16vQMSBZK7iy5HDFfeiP2WomfpGfSEPJx5"),
+        CNiCoInAddress("12E9bCLYb9uzh2MHhpsyR89V3eLXZp5afr"),
+        CNiCoInAddress("1EA4NJjMXSgVNsNgEc7nSyRf3epjp3ABrQ"),
+        CNiCoInAddress("1NN442B74LAsXUMUFZSriWZCUh8b5ECFR9"),
+        CNiCoInAddress("1EMaEQmjjDCjgu3auEam5ABQ1J9ZtdLdpV"),
+        CNiCoInAddress("1RYXoGz2cHTGsYC5zZdDwpCdGRj4aBdAX"),
+        CNiCoInAddress("19aDWt7kBf53uLANiWnLFnWo5CqASh79mi"),
+        CNiCoInAddress("1LDEniSxXknXLHT1BMWpFsBM3PQcgn1nYz"),
+        CNiCoInAddress("1Q4Lji94eWCC9xBzwrbRE9yTMYS5fdKg9z"),
+        CNiCoInAddress("16fQVYur5CVMq9VfNLYypKXNeTmvWnDKsz"),
+        CNiCoInAddress("1Mc3r8pCpuRiHhkD3DrWf89CUnZb6xbFbg"),
+        CNiCoInAddress("18oEnf5iR9CD2HFDc9Yr8kD7m5CrJVWRkv"),
+        CNiCoInAddress("12VDq99L8UQWr8Waqo4GreEGCEBnkxMaXy"),
+        CNiCoInAddress("1H7PxhMmvqiRT8NDEkSFjfDekRLQ65CqBN"),
+        CNiCoInAddress("17yC59RcpYsw7jX3Zw7c48AcWtJqaHUwAr"),
+        CNiCoInAddress("1AFT16ksWdqdjhk56gFDaRnr7vS4XCVtyQ"),
+        CNiCoInAddress("1G84MZVqN54QTD47YWWmimy9htaj1WC58U"),
+        CNiCoInAddress("13YcisL6YyUG5nqegyqyrL6pVtrMqGYtcq"),
+        CNiCoInAddress("1NYdmagVHfbqTgW4hYJKS2YnWrJzCnSsvZ"),
+        CNiCoInAddress("1PumqgHPLUjPKfddgwJA46D5GBdYgT8myg"),
+        CNiCoInAddress("1PFKxU6g1kQayDwvpiLX2vJgUghMqJz9Ck"),
+        CNiCoInAddress("154ENKy3HuYoN8xARVaxp61NUAt5GEknDj"),
+        CNiCoInAddress("12CJ8BD8L8tQXjrpy4UfjJwCCtoL6vsegD"),
+        CNiCoInAddress("1LXCWYJ6k7EG2Bi8rLh2jhV94L4G768yTa"),
+        CNiCoInAddress("1K1rbcUFmE7XScTsqiNEiJHyX69eqbZdDB"),
+        CNiCoInAddress("1uZZzXiu8n7eL96rcFWh9MvcqerYxaGce"),
+        CNiCoInAddress("1JidqtE1YHwXFC1utxPAp17RkM3rUqwULk"),
+        CNiCoInAddress("1PuMwPqNLLYi1sPxvJToid2EsfiP4xPfo6"),
+        CNiCoInAddress("14ZSJRvSdgYFA1xUM2txnQKdMXMfsEWvuJ"),
+        CNiCoInAddress("1D9RJw7p5zgz4JeWvVzYxBsAkvucRMiXfG"),
+        CNiCoInAddress("1JRpRLZgcfNNeVEwGQmYZw5nv7Aq3KVx5x"),
+        CNiCoInAddress("17Rqyx39YnpFN23dPE3CWRPC8JhuBVKktx"),
+        CNiCoInAddress("19pozj4JeWd6rpMDeTpx8d1Dv4rebhUkvT"),
+        CNiCoInAddress("15jULtTPTzXHr9ezTMFbaPJojbuYFrbrQp"),
+        CNiCoInAddress("19dfCSTERPh5j4XtYoJatjdjD9afReeY3s"),
+        CNiCoInAddress("1LgzNc1Sfbu8BaxKUESGbNzCNnpqvhpCi4"),
+        CNiCoInAddress("1HTvoZUUNncPkjjv17xHLEtncdrgcdnN46"),
+        CNiCoInAddress("1NHvSZWwk8RtgPvfhzykpvebQnVk1Q5XxX"),
+        CNiCoInAddress("1AzdeDfjz5C5yT6wVxurgS8QPkZviHvY8N"),
+        CNiCoInAddress("1BdFwnfS84uDeZn4sojUs5ZC8fSkx9o2XG"),
+        CNiCoInAddress("1AgCAgvQZPQTkdMg853SkM2WdRzN4Q2ATw"),
+        CNiCoInAddress("1JABYERsgkAYincsgCpic7MwV63iM19iXp"),
+        CNiCoInAddress("1JFudqZDUkBMdV4ShLmhxLD7sfNEYdBQCE"),
+        CNiCoInAddress("1Pqf48Skyxt77RNVwTLxUhA2BNCscaHJKa"),
+        CNiCoInAddress("1AtdTwFFYZJrUUSWbBLBCkodRcnqwb1a6G"),
+        CNiCoInAddress("14iezrH1nR9TjGtnywFPqBHbwYcEhwz8y9"),
+        CNiCoInAddress("16x2aavFb2AHKntUnzA3HC2wmi921YJn4i"),
+        CNiCoInAddress("1HovjtiToM6f2xV3Sxg4fxfvSYPCGGEXLe"),
+        CNiCoInAddress("1MNrqZyo7poywLPVap6PsmmT5CS4f8hyWq"),
+        CNiCoInAddress("1F6PzQRW2MPfCYvzgeUXoBXaEikH3E5zMk"),
+        CNiCoInAddress("1F2SpgUakBvx6aNgJiCtEZHnTqVWeQcoMk"),
+        CNiCoInAddress("13iTRwxSLGC17fzumSrRidaXe8v8awdDux"),
+        CNiCoInAddress("1KuyBiZBdXVq8oNGAPWEqWiFi2RyH8rvwd"),
+        CNiCoInAddress("1HdXmhHKkkzpn1UKmhBWFzQMYsUqxUuVZ9"),
+        CNiCoInAddress("1Dw9jXoWc5MsEH3uLB9pi98qeyijUrvWU3"),
+        CNiCoInAddress("15mW5WsusPo6LAAYLqa6ngFfQ1jX51v3Bn"),
+        CNiCoInAddress("1DFfarcjskvSi2w56msV4JeeVZqtuwEL9p"),
+        CNiCoInAddress("12SeGWd2txi4fdQKoFXsTdd2fgjDbABWyb"),
+        CNiCoInAddress("1MoENmjtakS8XTHcwsbVFeJkjEckMhS3xm"),
+        CNiCoInAddress("167pv4Hn53XQ4hFhyNtEyP36n8HrL3NU3j"),
+        CNiCoInAddress("1E6WgpC4bmYJagvsTzhRxZ1Z8sRSsQjmJX"),
+        CNiCoInAddress("1EFkVCzezsZCq56JWSBRf3Dy6tafFRxh4N"),
+        CNiCoInAddress("1KnKZwDb44Qf3Lutda2T85uFZiTZwe2v2C"),
+        CNiCoInAddress("1CLpF2fLukzBHard43mXLEXxz11gFK5dc9"),
+        CNiCoInAddress("1DXSfPi1Tj6tQ5qf5M6Yj6cpNmLfPKMwr1"),
+        CNiCoInAddress("16nHP74UsqeHewM1yUhNCL3zCjkWnqFt8g"),
+        CNiCoInAddress("1FeqXkG9jGEDcPaKJV8rdh4NbqTjbdvN4a"),
+        CNiCoInAddress("1LwwjmsoDtQ1Zh9N8doGMczP1TJnes2YoZ"),
+        CNiCoInAddress("1DgusdNgB6nRD2emfwURMmk33LrB7Wp95c"),
+        CNiCoInAddress("17kjPofVVmhZAWXnrVwfqizGtXWBufWwbf"),
+        CNiCoInAddress("1EnLHA3U15wXehXAC24W587EEaeyUcaA6K"),
+        CNiCoInAddress("1MwpkFtEwrAQNbsmbt4kB9WtoB8mFLXZ44"),
+        CNiCoInAddress("12iQRcVoRCbFNvoQARM3rufTkd7jXpHZEm"),
+        CNiCoInAddress("19zK2WFDkaHZfWa4uS5mzF2XD1KrZEMxy2"),
+        CNiCoInAddress("12Zs8LtRY1cTS3HKw1gwPzYjB1Ar6Er93R"),
+        CNiCoInAddress("1KDVcQhjZuX39Fvv8QbrSpaSycMA4YdPkU"),
+        CNiCoInAddress("1AT6rxNBT8sasYKrKm9fv7LdjXBS89Wewh"),
+        CNiCoInAddress("19YjbLEUgqV8joQMgijDWZoY1inwXf1hXc"),
+        CNiCoInAddress("1EpHQ43BkzmKYMiYwmRRKEXQidpgA499px"),
+        CNiCoInAddress("13bQP93mmUFtUGVuBEwZ9ymdbCC9yywgdL"),
+        CNiCoInAddress("1GatPyGkCX5YUW4f2QHJk1PzwspCRz9b3J"),
+        CNiCoInAddress("1Jk8sCUfHVE6VpwkkTG9qaYYS9u1zMmQAs"),
+        CNiCoInAddress("13N4Eiv2KiX4PeFwiWnC847JBv4TP2sn1Z"),
+        CNiCoInAddress("1ESzED9saJ3bVB6BbVSTFGDxRLnTgWRVDC"),
+        CNiCoInAddress("1CspvzG7HyuNXRLsaWnpsLXPDwkeDKd4mm"),
+        CNiCoInAddress("14Rs4fo9tK39kyEFoAjbvkcgGZ6k356t3T"),
+        CNiCoInAddress("1D6jgPJYoFhbY7gJjNMAbyfJzBGVtqSc1o"),
+        CNiCoInAddress("16MHoaVyYQgPU525fz2auJpK6JVyFKEiz1"),
+        CNiCoInAddress("1FfS9TQswYZHYDNkUmncRAYjYJkLzGncp5"),
+        CNiCoInAddress("14PXPSEjNjWAuqYa63RBT6gewnomE9saRu"),
+        CNiCoInAddress("1CHBBtBCRQz1TFyE12g8RbGPZ6UzX2AieC"),
+        CNiCoInAddress("1CMwT1jzfoe9VvURpZanaXVQobMQLr13W8"),
+        CNiCoInAddress("1696KNrMvHvnthPLZnGuYGY96UbEqLeXz6"),
+        CNiCoInAddress("1A7TQi9sMiNQX8uwwqFb8eqaXnpTJY4WYg"),
+        CNiCoInAddress("1GNuX6AN2KCF1AWtxAT9QYD6QRJubRvKaz"),
+        CNiCoInAddress("16L3CvHeZcZcr3wPhoEC3ZsMLN7YTonMTQ"),
+        CNiCoInAddress("1EnqRdqx1VZyfc5ia4pcmZstBcGdW8FGxn"),
+        CNiCoInAddress("1MQ1QeCMZhxFCgReGEPRS2Qy74FaPqFccW"),
+        CNiCoInAddress("16Za6Rn8dCmM8gctXQtwN1yQ2WXnhHsSgs"),
+        CNiCoInAddress("15k38dy86CRnirMY9Q1niVmfn7nfXTmppL"),
+        CNiCoInAddress("1MQsruCXBjCZzTZKKpPwcC74ztetbtAw4E"),
+        CNiCoInAddress("1cmAt63c4ZAqRe2fBQTYs5Jyx41fiBbhQ"),
+        CNiCoInAddress("1PBCaowV7gQM6Lj1NfSpH2TnHHmqXcYTsC"),
+        CNiCoInAddress("1841uXFc2kUTUogCDJwp4U1NPjSPqsg69x"),
+        CNiCoInAddress("1XNo9kDMM6uqvf9yCWmqj17rukC8abjtb"),
+        CNiCoInAddress("1A4kHAe6rNz1q8G6dYjNMyWzgVv4DxYget"),
+        CNiCoInAddress("18Y6y6zcJrG5j2RjmGqsUvtWkZhnTvRka7"),
+        CNiCoInAddress("1DkcMkHWUUVjXgAu2MFXVkUuwZ6JWv64cz"),
+        CNiCoInAddress("1JvXTyBxhjE9mERWEFnqeuAPgbJSi25qGd"),
+        CNiCoInAddress("1FHus2MsM8k4oKHt22YFYeoFkf65kxQFP3"),
+        CNiCoInAddress("18HLkAhrzeNsaMB3MY1xUGW7wkzjWGobT7"),
+        CNiCoInAddress("1AF7KmTRrS3mMxop2Viop1MctrNJmPAHQt"),
+        CNiCoInAddress("13g4rWjU2PK4eN9D9XXo4jRB84RiJ2hD7o"),
+        CNiCoInAddress("1EWUiUoxZXfTbZXDZGueag7XRnv5Mej8ZZ"),
+        CNiCoInAddress("1LuuGk4tyd4USQqtYypemjt5vs3VRqV1QU"),
+        CNiCoInAddress("15eUUDUYDuiKnt9xNbzhNFmorCK9F9mJb2"),
+        CNiCoInAddress("1HGzWgdrNAKsE9nE1GHtUvaXHNzvwTyPQX"),
+        CNiCoInAddress("11MhmCVmFszm6yTTwaK2dypwcLaybmCjp"),
+        CNiCoInAddress("1s9XWpGPQqhbog1S6xgGqcVnfvnLMAueZ"),
+        CNiCoInAddress("16f3tHcuRavx3tSWCM2jnnCX5jGa2vJe9Q"),
+        CNiCoInAddress("15NWaghRx51ravYTUqsnBF2hQFQeSHtTvS"),
+        CNiCoInAddress("1QGUUgikmqCinDQn3vfqx9q6mnT5ekA4BG"),
+        CNiCoInAddress("134WvpvyZUveYc98CmtWZc1oBBXdrV1GuU"),
+        CNiCoInAddress("1LqNfcDBn7eytc7Ln6fLrCDLkYeMa6R9dV"),
+        CNiCoInAddress("14xbponjm6rXp8cNzTJmtCJwvwvDuKvaCD"),
+        CNiCoInAddress("14D7JyUrv1HeSD7FCc8WupmbxUiGyfC7uC"),
+        CNiCoInAddress("1ER6GhDJokhBjB73DWDTdC2BP2J9DiqD1o"),
+        CNiCoInAddress("13Q3or3Hew7hBZzMoriz8LcMXwptqD5HEd"),
+        CNiCoInAddress("1HSyeVQEvdRwj2rutFN33cKu2tPzyGkgx2"),
+        CNiCoInAddress("1A1WaQQ6ZjXuEe2KYZNC3ycPg4X9czsR4D"),
+        CNiCoInAddress("1fhzxkMPY4hUYNywoQwyVGkinVKQrPJ2P"),
+        CNiCoInAddress("1Nf63BqwEmb7vU15bRfpvKEs5tMGZpR5Fi"),
+        CNiCoInAddress("1Gi6tjnRBecQovhRQVNmsPyVZYmphZerdg"),
+        CNiCoInAddress("1AJ87nhgSQkac9BUjEvbyWh8c95ciHLZWG"),
+        CNiCoInAddress("1WDyJLrJaLRePMtea6bAgADwzdpbW5nqd"),
+        CNiCoInAddress("1JTvhcJuxydevXw4ocUUteiPNWwPtMM56H"),
+        CNiCoInAddress("16X1LYmpxM2fPBjNTLbnPo2LdA6sB7fbNu"),
+        CNiCoInAddress("1315ZWhxgd6pqqTmvF21fxt5wzYvpcnZSm"),
+        CNiCoInAddress("17PWpyrUmkaCVPu6KXaWvuLLYvD9YU61RP"),
+        CNiCoInAddress("1PADxQpcx8Kvs3PprjYvM1wYFyjxB3tcs8"),
+        CNiCoInAddress("1BWyJmxybx3p1guhud8qxabrGbVLWaVNaM"),
+        CNiCoInAddress("17JpmLSEbXgmheAvTQ7iiBvR5TaSsM2Xgt"),
+        CNiCoInAddress("19oxMuyyipVsvxXWKBBrFmY8hQbWkiiVEv"),
+        CNiCoInAddress("16TvroBFWJmUN7VSHQLmyh6KiCri5QVTQu"),
+        CNiCoInAddress("1MXJR6XRoThY9rwvyvLkXWN17WN7rAQC4J"),
+        CNiCoInAddress("163N8CmDAf45CM6brXMpzg3AN2nkDXTuRt"),
+        CNiCoInAddress("1CWudCKLCxT5AXteLFeZRBDyb4moQH4cVL"),
+        CNiCoInAddress("1DYmgt2zpW2eNfyczC98aq76URHQMnfwZK"),
+        CNiCoInAddress("1JnE2YseXgBX4oHGo8VywsxnNkp52s6nkX"),
+        CNiCoInAddress("1D8WBBBCHhgLrMa8s3QU1bkRcRHEt8cNfv"),
+        CNiCoInAddress("1Fm5eoDvEZo4hyW4YEDu3q2gKbpCuo9hqw"),
+        CNiCoInAddress("18uRTixnVaKMz9tyoR6Ve6Rqdwtt8oZ1Zw"),
+        CNiCoInAddress("1FuByKdd2RK3hjc3UFeV56HvheyAMnjMMS"),
+        CNiCoInAddress("17nDqatJ7M6M9vFRa4BngCCLPGSJ6mfc8b"),
+        CNiCoInAddress("1G4qHkiaaVZwuLqwvh2itFjR18iThkeaDQ"),
+        CNiCoInAddress("18ZcHUg5wV4sSdd9pS7xv5rYsfx5D1hZWi"),
+        CNiCoInAddress("1CZU6UCZjtWueXQWYzyrFa4K7pTSeBQ8cw"),
+        CNiCoInAddress("19zRVJvXaXZvygqbHAP1ZKF5Rx9gq3Xh8u"),
+        CNiCoInAddress("1HQAyw9UUi2eiQHJcnbg5eeJTnv2QoEQqA"),
+        CNiCoInAddress("16eZAqdqypn47T8DwS1archd39uXqK8JQ8"),
+        CNiCoInAddress("19he5Hy915MbSZBvwHjB3LAm5UyLnmQ5TK"),
+        CNiCoInAddress("1CzGcY5JKDroUtdFdZJArGeEmKMEtyeAKw"),
+        CNiCoInAddress("1DzowkZrtEQgoDF8xgxjPBfLaBMeBHjNr2"),
+        CNiCoInAddress("16GA6zc9iTUB8o47oi7fbE88ayEi8C7w2r"),
+        CNiCoInAddress("1Mvp5TikHrzJetDMbjHkzAkP9rMBfQrais"),
+        CNiCoInAddress("1Lrbk1vrmCqVfajBqtwHD1x9x72jeDCon5"),
+        CNiCoInAddress("1AMDHRKUah3J8yESFt7NnoUXrM4ULHcUpN"),
+        CNiCoInAddress("1MbnTTv5FJX8RsK5tw9KjNx1VCvo94GEKK"),
+        CNiCoInAddress("1Hmbm1TUDuDwdVWkU1oiaReRRBTzb8fMDJ"),
+        CNiCoInAddress("15XYapuYSjaDc4uDXJsf3PF33YzSRs5P3M"),
+        CNiCoInAddress("1C3ovhhZwo73isNQPuKKD5VDm2XwByBkTK"),
+        CNiCoInAddress("16VJrBFjFjhLY93NihDvWqBpUeiXeL2FUi"),
+        CNiCoInAddress("1C9Niuy1cSW6a6g5tm8GhPsSML6ZtWeUQS"),
+        CNiCoInAddress("149937wZtsTvtwmixD33npnsnyUm5zjstX"),
+        CNiCoInAddress("1NkCKjPZUFecVWxLGnJbN7Fp8viJRG5Xg4"),
+        CNiCoInAddress("1MG3okwhF3YDwVWDcYsNr5ySA4eMtCATrK"),
+        CNiCoInAddress("1GtzbwNuHYBZaDRVpJGuDwjBQhSh5RBVRZ"),
+        CNiCoInAddress("1CJi6dja55AtGeuJX6WLFGTHsoofqZyDNu"),
+        CNiCoInAddress("1oftVXkjfpJSMKGnz1pps1xVWNUNNhAmq"),
+        CNiCoInAddress("168KgGGUEEx22eCNuSMjsKvn5chiZ5c217"),
+        CNiCoInAddress("1FmQzGLJFu3AvucwDEAjYRM4fPgiSZsT6Q"),
+        CNiCoInAddress("1F9t4EmWXy2Wui21LaMuZmRDwRCF38aDZN"),
+        CNiCoInAddress("19eFuss1dgxPdDfoAu6AsVmBUj5d2DUPu3"),
+        CNiCoInAddress("15Yr2PPbFGqbi2SZtZ59cvd5y2Es8atRE5"),
+        CNiCoInAddress("1Pz8oisCda5aJXtVVDo1mfxxvgymVNcmsM"),
+        CNiCoInAddress("1HkHQHNkjXp6VinoEG6a1i55NmreXC9yAX"),
+        CNiCoInAddress("12ShPmbsADZMacnr5u2DPxssKXjd3HaCZc"),
+        CNiCoInAddress("1BasQDDfZ677LF3mEAQUEFHvJexZ8ZxY47"),
+        CNiCoInAddress("1FVXTVaK3rwSrx67WGdNkNFwL5sVm81TEK"),
+        CNiCoInAddress("1NV8VjVBrkgCTJvyBHZumboXjPtSNZvRJX"),
+        CNiCoInAddress("1HVdN1BSusJZ42sSfJFHB2CJ6LcW5Fz31a"),
+        CNiCoInAddress("12j2yfUP2dNo3HwdrTDjMGZhzBcdhYvFj6"),
+        CNiCoInAddress("1BrWHBKCpvNYssq8Kj8yY6qvy7GqFgk8UP"),
+        CNiCoInAddress("1G3faUnBxMHwwX2uLn6dZJEj9pmJ2o5cnq"),
+        CNiCoInAddress("1Nq59Py1u73B26aTTRhZG3g9h5fmrmkeX9"),
+        CNiCoInAddress("1DMuz7B193myzVq4Kgg76Jb6Da2UjkAti"),
+        CNiCoInAddress("1124BMmAevhic3H1MQB3teQFhoVi7RVUhR"),
+        CNiCoInAddress("1B1hrgcDNfSuaKJi3oJ4cBtyysq2BpGFz8"),
+        CNiCoInAddress("18NE1w2soK6xGUYYvoTe7oEtRtQhxBLXCq"),
+        CNiCoInAddress("1MESy7CY2yTgxSERyejcvCGjK8Qm2EhE4g"),
+        CNiCoInAddress("1445Hs1Lgh9pPvD8mSt5oiGwTY8yT2sy9R"),
+        CNiCoInAddress("14pm2Fxwin4mwHqd5ujXAXTJJFuQ31qYUf"),
+        CNiCoInAddress("17UhQpeFQ3nCjj8PJKCrTWHnP8YSvrNM7h"),
+        CNiCoInAddress("15zVu5t8iURV2feuvmnHgYp9u7cxPC4XrN"),
+        CNiCoInAddress("19JriYALeNskNnvjYidpoNHNLegftkViqH"),
+        CNiCoInAddress("13mauBB6JYTPcfoWbNbCWKk4sNqmwxCXse"),
+        CNiCoInAddress("1LwRt9rpGaekbht7UAitg2ADmFtDrKThYV"),
+        CNiCoInAddress("15Z9wnxM6VxrRkqhLZpLskGRJ2dLRMEmCg"),
+        CNiCoInAddress("1GvQwfMSMRggmmFCRqf1EmvaG5U5sY4sKL"),
+        CNiCoInAddress("13iUoiiVq7C4fUmy94r1HEDf35YKwBAVXh"),
+        CNiCoInAddress("1ELZsnzgBmZSSxQQYuAANg8izDFTbzhbPB"),
+        CNiCoInAddress("13me2Z71XAtmkzggnqusdvuRiXZzFRGZBj"),
+        CNiCoInAddress("1KC7ECvdcofiYXJ63iUnvFrEH4zzhQZ2pB"),
+        CNiCoInAddress("1LtFLa3oaEBhmHQ5iXRvFqeNcrzU8GPNMM"),
+        CNiCoInAddress("1LNHH8DGXWQRyfmkSkaJcBkkiVxUhH8tBM"),
+        CNiCoInAddress("1Daw5kGzsqBhfRfMV6dAA4bgBZ2LBWS1nY"),
+        CNiCoInAddress("164XLENwRiappRPUP47sRTSyXtW8CAXVLi"),
+        CNiCoInAddress("1CFoTaknkFGADVo2rK92jwq18NWBzVcJGS"),
+        CNiCoInAddress("1MnrNuPrnuJFxYnkpKDqUymHGjb1d6qLVq"),
+        CNiCoInAddress("1BpwPwf8kUssmoMCoWnHCVY4wjBJi3CZyD"),
+        CNiCoInAddress("1jiJb2DU3DB6ujD8eV3DZXmnfwWaHti4y"),
+        CNiCoInAddress("1DqQnvWdtKvwBtePpCbDd8juZ9ZbeaKFdH"),
+        CNiCoInAddress("131D32PNpqqGtLGUaAaZePqpUdBTiy8Akh"),
+        CNiCoInAddress("16jK6KaY7Ub7fZ7YaBi94ZsygovzixnRNx"),
+        CNiCoInAddress("1EJx1ShX4UJVrzynP3oZw8wdLpSGC1KPrz"),
+        CNiCoInAddress("1899kFmma5FongtN9JfvFKqhwtbw2w9MDe"),
+        CNiCoInAddress("1FNNBK9SeDUufbbnmoagUFt7oKVbb65vaw"),
+        CNiCoInAddress("1LxF4pLjeSpNs4ux24MDduzCzrM2KCsE7M"),
+        CNiCoInAddress("1BZjVRe2CCA7G7qnG3beWWhG173f1mbNX2"),
+        CNiCoInAddress("1L5HWs7WrK457CzjAgnHghveFpQVv7rRTe"),
+        CNiCoInAddress("1Kp4bjG9nwbogd8WM62ijGG6onW9Wo4aYK"),
+        CNiCoInAddress("1hhvJ4QmB6RX12Bps9xhnMHCDDXTXAnDu"),
+        CNiCoInAddress("19xiuTYSm85gNsPZw8hGLS69e2DjVbCuAP"),
+        CNiCoInAddress("19WdcJU8Z1W3ZZnbpfDRbdrYGapxp1L5zo"),
+        CNiCoInAddress("121hT7w8DN3x1pYEowak7FjmNgihMNo2cd"),
+        CNiCoInAddress("1BtthjPb9GPKwgcJtrgZRQRWhiRSCHmyvk"),
+        CNiCoInAddress("1JKgRTkMgEodFFpPwoz9W6pejMN3x3J9X1"),
+        CNiCoInAddress("18zp4dHdouYqFn2qC4ttAva8cwqhZ4pm4K"),
+        CNiCoInAddress("1ELAVZKvGykuzRDCvFUsJTL4istYisbxpK"),
+        CNiCoInAddress("1PfULZdJniM8SutFdjoKvG3WLUwxZL2YUf"),
+        CNiCoInAddress("1DTbnuz4dPLdduseE3k5xr62eFAYjCSk3E"),
+        CNiCoInAddress("14jVGdWJRcqpdgWPAbbvhMfVnLha6MdnYU"),
+        CNiCoInAddress("1GBiMVjsqkcGxij2hGFQxVUX2WjDcr1Esf"),
+        CNiCoInAddress("1FGUuAuGRkSqEL8Besg33QsekxmBB75ZUH"),
+        CNiCoInAddress("19FsZeejdbfUKK21wENRdoR2BUowD4FsMZ"),
+        CNiCoInAddress("1LbBHWffmANdhcb1Wciv4jWwXPGrtVFhsU"),
+        CNiCoInAddress("1FT9PRuDmFKxZorYrfgibWaaBdKWv7PiB4"),
+        CNiCoInAddress("1FUvPJ3nXMUrFEWqkjxPe5esqQ2GoCmUAk"),
+        CNiCoInAddress("1LJLBDK8q7yLibK2oYTA6hbD9UpmP6U3QP"),
+        CNiCoInAddress("14E9GEg9T5N9aja1FV2ewNFjMK6wPEgsKb"),
+        CNiCoInAddress("1JYmABbYkUjAyowLwa1zoQj86PEWMBdeZP"),
+        CNiCoInAddress("1NCfTbrEsZrCT3Efyk5AfvqP2xY6NesWHy"),
+        CNiCoInAddress("1Bwd6rcgGLq8sdo3FHHSmh3J7ufqdgMeqi"),
+        CNiCoInAddress("1PzAWHEt2xabgWEki5hTgwtTyuKRS1at39"),
+        CNiCoInAddress("1Fo3r7DWDtJ8Yu2UqngNqKMSw98XgsXehW"),
+        CNiCoInAddress("1H1b6FLd5eqH8Q9Cw8UkZv2nY3xxKTfsH3"),
+        CNiCoInAddress("12x9TqiF9FQU7sqnRiCmrRZmG7dLs9hyG6"),
+        CNiCoInAddress("13VYYQ8K9AFiajev9QdHM6Kj8SqevRT7GS"),
+        CNiCoInAddress("149HFz2K7D4GffQm8t7rKQuWmcwJohsimk"),
+        CNiCoInAddress("1JqwkYTg3ZuWMpjhxrJYgW7E826HYoiBSG"),
+        CNiCoInAddress("1NiyjCKxM33nozwzU2LNtWBPWrWTUpiaAM"),
+        CNiCoInAddress("1LD4F5tA87e7nMwNRuHhgwH6zTFZ1LyoE2"),
+        CNiCoInAddress("1M3wUX9YYrcVSSw6Tncdoic3Fj13okQ63u"),
+        CNiCoInAddress("1PVKsqeVqM4B2ccq915GHeK3aDeruStr24"),
+        CNiCoInAddress("1PKNQqSuPknZ1PaqKkRqa9qYujWKL9KQ7E")
     };
 
     static bool fFirstRun = true;
@@ -1825,7 +1825,7 @@ bool CTransaction::ConnectInputs(MapPrevTx inputs,
 {
     // Take over previous transactions' spent pointers
     // fBlock is true when this is called from AcceptBlock when a new best-block is added to the blockchain
-    // fMiner is true when called from the internal freicoin miner
+    // fMiner is true when called from the internal nicoin miner
     // ... both are false when called from CTransaction::AcceptToMemoryPool
     if (!IsCoinBase())
     {
@@ -2659,7 +2659,7 @@ bool CheckDiskSpace(uint64 nAdditionalBytes)
         string strMessage = _("Warning: Disk space is low!");
         strMiscWarning = strMessage;
         printf("*** %s\n", strMessage.c_str());
-        uiInterface.ThreadSafeMessageBox(strMessage, "Freicoin", CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION | CClientUIInterface::MODAL);
+        uiInterface.ThreadSafeMessageBox(strMessage, "NiCoIn", CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION | CClientUIInterface::MODAL);
         StartShutdown();
         return false;
     }
@@ -2807,7 +2807,7 @@ Let this be the awaited dawn.";
             << ParseHex("c26be5ec809aa4bf6b30aa89823cff7cedc3679a")
             << OP_EQUALVERIFY
             << OP_CHECKSIG;
-        const char* pszMessage4 = "Ich w\xc3\xbc""nsche Freicoin viel Erfolg zum Nutzen der 99 Prozent!";
+        const char* pszMessage4 = "Ich w\xc3\xbc""nsche NiCoIn viel Erfolg zum Nutzen der 99 Prozent!";
         txNew.vout[4].SetInitialValue(1LL);
         txNew.vout[4].scriptPubKey = CScript()
             << ParseHex("202020202020")
@@ -4054,7 +4054,7 @@ bool SendMessages(CNode* pto, bool fSendTrickle)
 
 //////////////////////////////////////////////////////////////////////////////
 //
-// FreicoinMiner
+// NiCoInMiner
 //
 
 int static FormatHashBlocks(void* pbuffer, unsigned int len)
@@ -4549,7 +4549,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
         return false;
 
     //// debug print
-    printf("FreicoinMiner:\n");
+    printf("NiCoInMiner:\n");
     printf("proof-of-work found  \n  hash: %s  \ntarget: %s\n", hash.GetHex().c_str(), hashTarget.GetHex().c_str());
     pblock->print();
     printf("generated %s\n", FormatMoney(pblock->vtx[0].GetValueOut()).c_str());
@@ -4558,7 +4558,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
     {
         LOCK(cs_main);
         if (pblock->hashPrevBlock != hashBestChain)
-            return error("FreicoinMiner : generated block is stale");
+            return error("NiCoInMiner : generated block is stale");
 
         // Remove key from key pool
         reservekey.KeepKey();
@@ -4571,31 +4571,31 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
 
         // Process this block the same as if we had received it from another node
         if (!ProcessBlock(NULL, pblock))
-            return error("FreicoinMiner : ProcessBlock, block not accepted");
+            return error("NiCoInMiner : ProcessBlock, block not accepted");
     }
 
     return true;
 }
 
-void static ThreadFreicoinMiner(void* parg);
+void static ThreadNiCoInMiner(void* parg);
 
-static bool fGenerateFreicoins = false;
+static bool fGenerateNiCoIns = false;
 static bool fLimitProcessors = false;
 static int nLimitProcessors = -1;
 
-void static FreicoinMiner(CWallet *pwallet)
+void static NiCoInMiner(CWallet *pwallet)
 {
-    printf("FreicoinMiner started\n");
+    printf("NiCoInMiner started\n");
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
 
     // Make this thread recognisable as the mining thread
-    RenameThread("freicoin-miner");
+    RenameThread("nicoin-miner");
 
     // Each thread has its own key and counter
     CReserveKey reservekey(pwallet);
     unsigned int nExtraNonce = 0;
 
-    while (fGenerateFreicoins)
+    while (fGenerateNiCoIns)
     {
         if (fShutdown)
             return;
@@ -4604,7 +4604,7 @@ void static FreicoinMiner(CWallet *pwallet)
             Sleep(1000);
             if (fShutdown)
                 return;
-            if (!fGenerateFreicoins)
+            if (!fGenerateNiCoIns)
                 return;
         }
 
@@ -4620,7 +4620,7 @@ void static FreicoinMiner(CWallet *pwallet)
             return;
         IncrementExtraNonce(pblock.get(), pindexPrev, nExtraNonce);
 
-        printf("Running FreicoinMiner with %"PRIszu" transactions in block (%u bytes)\n", pblock->vtx.size(),
+        printf("Running NiCoInMiner with %"PRIszu" transactions in block (%u bytes)\n", pblock->vtx.size(),
                ::GetSerializeSize(*pblock, SER_NETWORK, PROTOCOL_VERSION));
 
 
@@ -4705,7 +4705,7 @@ void static FreicoinMiner(CWallet *pwallet)
             // Check for stop or if block needs to be rebuilt
             if (fShutdown)
                 return;
-            if (!fGenerateFreicoins)
+            if (!fGenerateNiCoIns)
                 return;
             if (fLimitProcessors && vnThreadsRunning[THREAD_MINER] > nLimitProcessors)
                 return;
@@ -4731,35 +4731,35 @@ void static FreicoinMiner(CWallet *pwallet)
     }
 }
 
-void static ThreadFreicoinMiner(void* parg)
+void static ThreadNiCoInMiner(void* parg)
 {
     CWallet* pwallet = (CWallet*)parg;
     try
     {
         vnThreadsRunning[THREAD_MINER]++;
-        FreicoinMiner(pwallet);
+        NiCoInMiner(pwallet);
         vnThreadsRunning[THREAD_MINER]--;
     }
     catch (std::exception& e) {
         vnThreadsRunning[THREAD_MINER]--;
-        PrintException(&e, "ThreadFreicoinMiner()");
+        PrintException(&e, "ThreadNiCoInMiner()");
     } catch (...) {
         vnThreadsRunning[THREAD_MINER]--;
-        PrintException(NULL, "ThreadFreicoinMiner()");
+        PrintException(NULL, "ThreadNiCoInMiner()");
     }
     nHPSTimerStart = 0;
     if (vnThreadsRunning[THREAD_MINER] == 0)
         dHashesPerSec = 0;
-    printf("ThreadFreicoinMiner exiting, %d threads remaining\n", vnThreadsRunning[THREAD_MINER]);
+    printf("ThreadNiCoInMiner exiting, %d threads remaining\n", vnThreadsRunning[THREAD_MINER]);
 }
 
 
-void GenerateFreicoins(bool fGenerate, CWallet* pwallet)
+void GenerateNiCoIns(bool fGenerate, CWallet* pwallet)
 {
-    fGenerateFreicoins = fGenerate;
+    fGenerateNiCoIns = fGenerate;
     nLimitProcessors = GetArg("-genproclimit", -1);
     if (nLimitProcessors == 0)
-        fGenerateFreicoins = false;
+        fGenerateNiCoIns = false;
     fLimitProcessors = (nLimitProcessors != -1);
 
     if (fGenerate)
@@ -4771,11 +4771,11 @@ void GenerateFreicoins(bool fGenerate, CWallet* pwallet)
         if (fLimitProcessors && nProcessors > nLimitProcessors)
             nProcessors = nLimitProcessors;
         int nAddThreads = nProcessors - vnThreadsRunning[THREAD_MINER];
-        printf("Starting %d FreicoinMiner threads\n", nAddThreads);
+        printf("Starting %d NiCoInMiner threads\n", nAddThreads);
         for (int i = 0; i < nAddThreads; i++)
         {
-            if (!NewThread(ThreadFreicoinMiner, pwallet))
-                printf("Error: NewThread(ThreadFreicoinMiner) failed\n");
+            if (!NewThread(ThreadNiCoInMiner, pwallet))
+                printf("Error: NewThread(ThreadNiCoInMiner) failed\n");
             Sleep(10);
         }
     }
