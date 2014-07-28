@@ -1,0 +1,2 @@
+debian/bin/nicoind usr/bin
+src/nicoind usr/lib/nicoin

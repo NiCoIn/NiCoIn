@@ -1,0 +1,5 @@
+nicoin-qt usr/bin
+share/pixmaps/nicoin32.xpm usr/share/pixmaps
+share/pixmaps/nicoin80.xpm usr/share/pixmaps
+debian/nicoin-qt.desktop usr/share/applications
+debian/nicoin-qt.protocol usr/share/kde4/services/

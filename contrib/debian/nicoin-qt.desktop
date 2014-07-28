@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=NiCoIn
+Comment=NiCoIn P2P Cryptocurrency
+Comment[fr]=NiCoIn, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=NiCoIn, eşten eşe kriptografik sanal para birimi
+Exec=/usr/bin/nicoin-qt
+Terminal=false
+Type=Application
+Icon=/usr/share/pixmaps/nicoin80.xpm
+MimeType=x-scheme-handler/nicoin;
+Categories=Office;

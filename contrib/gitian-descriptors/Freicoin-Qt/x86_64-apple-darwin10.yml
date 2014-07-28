@@ -1,5 +1,5 @@
 ---
-name: "Freicoin-Qt"
+name: "NiCoIn-Qt"
 suites:
 - "precise"
 architectures:
@@ -36,7 +36,7 @@ script: |
   DB_VER=4.8.30.NC
   DBUS_VER=1.6.4
   EXPAT_VER=2.1.0
-  FREICOIN_VER=0.0.2-2
+  NICOIN_VER=0.0.2-2
   GMP_VER=5.0.5
   LIBPNG_VER=1.5.9
   MINIUPNPC_VER=1.6
@@ -76,9 +76,9 @@ script: |
   popd
   export PATH=$PREFIX/bin:$PREFIX/usr/bin:$PATH
   
-  mkdir -p "$BUILD"/src/freicoin
-  tar -C "$BUILD"/src/freicoin -xf "$GITIANDIR"/src-local.tar.xz
-  pushd "$BUILD"/src/freicoin
+  mkdir -p "$BUILD"/src/nicoin
+  tar -C "$BUILD"/src/nicoin -xf "$GITIANDIR"/src-local.tar.xz
+  pushd "$BUILD"/src/nicoin
   QMAKEPATH="$XCHAIN"/Developer/usr/local/Qt4.8 \
   QMAKESPEC=darwin-g++ \
   qmake \
@@ -89,17 +89,17 @@ script: |
     USE_QRCODE=1 \
     USE_DBUS=1
   make
-  ${TARGET}-strip freicoin-qt
+  ${TARGET}-strip nicoin-qt
   find "$PREFIX" -mindepth 1 -maxdepth 1 -print0 | xargs -0 rm -rf
   popd
   
   mkdir -p "$PREFIX"/bin
-  cp -a "$BUILD"/src/freicoin/freicoin-qt "$PREFIX"/bin/Freicoin-Qt
+  cp -a "$BUILD"/src/nicoin/nicoin-qt "$PREFIX"/bin/NiCoIn-Qt
   
   mkdir -p "$PREFIX"/src
   tar -C "$PREFIX"/src -xf "$GITIANDIR"/src-local.tar.xz
   
   pushd "$PREFIX"
   find * -not -type d -print0 | sort -z | xargs -0 \
-    zip -r "$OUTDIR"/Freicoin-Qt-${TARGET}-${FREICOIN_VER}-gitian.zip
+    zip -r "$OUTDIR"/NiCoIn-Qt-${TARGET}-${NICOIN_VER}-gitian.zip
   popd

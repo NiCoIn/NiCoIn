@@ -1,12 +1,12 @@
 Format: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?rev=174
-Upstream-Name: Freicoin
-Upstream-Contact: Mark Friedenbach <mark@monetize.io>
- irc://#freicoin@freenode.net
-Source: https://github.com/freicoin/freicoin
+Upstream-Name: NiCoIn
+Upstream-Contact: Doctor N. <doctor.n@ggtm.eu>
+ irc://irc.ggtm.eu/GGTM
+Source: https://github.com/NiCoIn/NiCoIn
 
 Files: *
 Copyright: 2009-2012, Bitcoin Developers
-           2012, Freicoin Developers
+           2014, NiCoIn Developers
 License: Expat
 Comment: The Bitcoin Developers encompasses the current developers listed on bitcoin.org,
          as well as the numerous contributors to that project. The Bitcoin Developers

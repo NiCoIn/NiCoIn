@@ -1,5 +1,5 @@
 ---
-name: "Freicoin-Qt"
+name: "NiCoIn-Qt"
 suites:
 - "precise"
 architectures:
@@ -32,7 +32,7 @@ script: |
   
   BOOST_VER=1_49_0
   DB_VER=4.8.30.NC
-  FREICOIN_VER=0.0.2-2
+  NICOIN_VER=0.0.2-2
   GMP_VER=5.0.5
   LIBPNG_VER=1.5.9
   MINIUPNPC_VER=1.6
@@ -73,9 +73,9 @@ script: |
   popd
   export PATH=$PREFIX/bin:$PREFIX/usr/bin:$PATH
   
-  mkdir -p "$BUILD"/src/freicoin
-  tar -C "$BUILD"/src/freicoin -xf "$GITIANDIR"/src-local.tar.xz
-  pushd "$BUILD"/src/freicoin
+  mkdir -p "$BUILD"/src/nicoin
+  tar -C "$BUILD"/src/nicoin -xf "$GITIANDIR"/src-local.tar.xz
+  pushd "$BUILD"/src/nicoin
   QMAKEPATH="$PREFIX" \
   QMAKESPEC=unsupported/win32-g++-cross \
   qmake \
@@ -84,21 +84,21 @@ script: |
     RELEASE=1 \
     BOOST_LIB_SUFFIX=-mt \
     BOOST_THREAD_LIB_SUFFIX=_win32-mt \
-    FREICOIN_NEED_QT_PLUGINS=1 \
+    NICOIN_NEED_QT_PLUGINS=1 \
     USE_QRCODE=1 \
     USE_DBUS=1
   make
-  ${TARGET}-strip release/freicoin-qt.exe
+  ${TARGET}-strip release/nicoin-qt.exe
   find "$PREFIX" -mindepth 1 -maxdepth 1 -print0 | xargs -0 rm -rf
   popd
   
   mkdir -p "$PREFIX"/bin
-  cp -a "$BUILD"/src/freicoin/release/freicoin-qt.exe "$PREFIX"/bin/Freicoin-Qt.exe
+  cp -a "$BUILD"/src/nicoin/release/nicoin-qt.exe "$PREFIX"/bin/NiCoIn-Qt.exe
   
   mkdir -p "$PREFIX"/src
   tar -C "$PREFIX"/src -xf "$GITIANDIR"/src-local.tar.xz
   
   pushd "$PREFIX"
   find * -not -type d -print0 | sort -z | xargs -0 \
-    zip -r "$OUTDIR"/Freicoin-Qt-${TARGET}-${FREICOIN_VER}-gitian.zip
+    zip -r "$OUTDIR"/NiCoIn-Qt-${TARGET}-${NICOIN_VER}-gitian.zip
   popd
